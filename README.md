@@ -1,7 +1,7 @@
 # CSharpProjetoFinal
 Este repositório tem como objetivo de avaliar todas as competências da disciplina, ministrada pelo professor Douglas Barcelos.
 
-O projeto será uma aplicativo voltado para desktop. 
+O projeto será uma aplicativo voltado para desktop. <br>
 O sistema deverá permitir o cadastro, edição, exclusão / inativação e listagem de Usuario.
 O sistema deverá permitir o cadastro, edição, exclusão e listagem de Estabelecimento.
 O sistema deverá permitir o cadastro, edição, exclusão e listagem de Produto.
