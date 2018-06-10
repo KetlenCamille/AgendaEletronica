@@ -1,7 +1,7 @@
 # CSharpProjetoFinal
 Este repositório tem como objetivo de avaliar todas as competências da disciplina, ministrada pelo professor Douglas Barcelos.
 
-O projeto será uma agenda eletronica voltado para desktop, onde será permitido os seguintes requisitos:. <br>
+O projeto será uma agenda eletronica voltado para desktop, a partir dos seguintes requisitos: <br>
 -> O sistema deverá permitir o cadastro, edição, exclusão / inativação e listagem de Usuario. <br>
 -> O sistema deverá permitir o cadastro, edição, exclusão e listagem de Estabelecimento. <br>
 -> O sistema deverá permitir o cadastro, edição, exclusão e listagem de Produto. <br>
