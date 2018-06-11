@@ -12,6 +12,7 @@ namespace Models
         public int idEndereco { get; set; }
         public string cnpjEstabelecimento { get; set; }
         public string nomeFantasia { get; set; }
+        public string categoria { get; set; }
         public string telefoneEstabelecimento { get; set; }
         public string websiteEstabelecimento { get; set; }
         public string emailEstabelecimento { get; set; }

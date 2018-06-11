@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Base\IBaseController.cs" />
     <Compile Include="DAO\Contexto.cs" />
+    <Compile Include="EstabelecimentoController.cs" />
     <Compile Include="ProdutoController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
