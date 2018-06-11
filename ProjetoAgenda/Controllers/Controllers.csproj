@@ -58,12 +58,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\IBaseController.cs" />
+    <Compile Include="DAO\Contexto.cs" />
     <Compile Include="ProdutoController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{BEACB05F-9665-4B33-9E40-BA78772EEA4D}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
