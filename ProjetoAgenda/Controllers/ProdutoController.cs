@@ -27,9 +27,10 @@ namespace Controllers
             }
         }
     
-        public void Editar(Produto entity)
+        public void Editar(Produto produto)
         {
-            throw new NotImplementedException();
+            contexto.Entry(produto).State = System.Data.Entity.EntityState.Modified;
+            contexto.SaveChanges();
         }
 
         public void Excluir(int id)
