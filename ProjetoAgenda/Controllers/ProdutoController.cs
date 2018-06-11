@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Controllers
 {
-    public class Class1
+    public class ProdutoController
     {
+
     }
 }
