@@ -20,7 +20,11 @@ namespace Controllers
 
         public void Cadastrar(Produto produto)
         {
-            throw new NotImplementedException();
+            if(produto == null)
+            {
+                contexto.Produtos.Add(produto);
+                contexto.SaveChanges();
+            }
         }
     
         public void Editar(Produto entity)
