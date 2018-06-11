@@ -46,7 +46,7 @@ namespace Controllers
 
         public IList<Produto> ListarTodos()
         {
-            throw new NotImplementedException();
+            return contexto.Produtos.ToList();
         }
     }
 }
