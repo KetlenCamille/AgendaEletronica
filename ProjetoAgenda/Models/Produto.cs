@@ -10,8 +10,6 @@ namespace Models
     {
         public int IdProduto { get; set; }
 
-        public string categoriaProduto { get; set; }
-
         public string descricaoProduto { get; set; }
     }
 }
