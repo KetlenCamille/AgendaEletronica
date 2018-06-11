@@ -13,9 +13,9 @@ namespace Controllers
     {
         Contexto contexto = new Contexto();
 
-        public Produto BuscarPorId(int id)
+        public Produto BuscarPorId(int idProduto)
         {
-            throw new NotImplementedException();
+            return contexto.Produtos.Find(idProduto);
         }
 
         public void Cadastrar(Produto produto)
