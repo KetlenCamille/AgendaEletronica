@@ -1,4 +1,5 @@
 ﻿using Controllers.Base;
+using Controllers.DAO;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,8 @@ namespace Controllers
 {
     public class ProdutoController : IBaseController<Produto>
     {
+        Contexto contexto = new Contexto();
+
         public Produto BuscarPorId(int id)
         {
             throw new NotImplementedException();
