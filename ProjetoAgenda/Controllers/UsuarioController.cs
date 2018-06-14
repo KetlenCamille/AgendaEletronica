@@ -46,7 +46,7 @@ namespace Controllers
 
         public IList<Usuario> ListarTodos()
         {
-            throw new NotImplementedException();
+            return contexto.Usuarios.ToList();
         }
     }
 }
