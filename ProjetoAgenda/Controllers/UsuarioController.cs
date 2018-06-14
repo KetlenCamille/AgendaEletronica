@@ -33,9 +33,15 @@ namespace Controllers
             contexto.SaveChanges();
         }
 
-        public void Excluir(int id)
+        public void Excluir(int idUsuario)
         {
-            throw new NotImplementedException();
+            Usuario usuarioExcluir = BuscarPorId(idUsuario);
+
+            if (usuarioExcluir != null)
+            {
+                contexto.Entry(usuarioExcluir).State = System.Data.Entity.EntityState.Deleted;
+                contexto.SaveChanges();
+            }
         }
 
         public IList<Usuario> ListarTodos()
