@@ -27,9 +27,10 @@ namespace Controllers
             }
         }
 
-        public void Editar(Usuario entity)
+        public void Editar(Usuario usuario)
         {
-            throw new NotImplementedException();
+            contexto.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
+            contexto.SaveChanges();
         }
 
         public void Excluir(int id)
