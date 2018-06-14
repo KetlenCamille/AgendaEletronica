@@ -18,9 +18,13 @@ namespace Controllers
             return contexto.Produtos.Find(idUsuario);
         }
 
-        public void Cadastrar(Usuario entity)
+        public void Cadastrar(Usuario usuario)
         {
-            throw new NotImplementedException();
+            if(usuario != null)
+            {
+                contexto.Usuarios.Add(usuario);
+                contexto.SaveChanges();
+            }
         }
 
         public void Editar(Usuario entity)
