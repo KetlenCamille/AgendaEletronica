@@ -1,4 +1,4 @@
-# AgendaEletronica
+# AgendaTelefonicaEletronica
 Este repositório tem como objetivo de avaliar todas as competências da disciplina, ministrada pelo professor Douglas Barcelos.
 
 O projeto será uma agenda eletronica voltado para desktop, a partir dos seguintes requisitos: <br>
