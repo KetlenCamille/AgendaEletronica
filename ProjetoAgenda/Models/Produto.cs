@@ -11,5 +11,7 @@ namespace Models
         public int IdProduto { get; set; }
 
         public string descricaoProduto { get; set; }
+
+        public bool ativoProduto { get; set; }
     }
 }
