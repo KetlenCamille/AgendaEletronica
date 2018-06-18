@@ -15,7 +15,7 @@ namespace Controllers
 
         public Usuario BuscarPorId(int idUsuario)
         {
-            return contexto.Produtos.Find(idUsuario);
+            return contexto.Usuarios.Find(idUsuario);
         }
 
         public void Cadastrar(Usuario usuario)
@@ -48,5 +48,6 @@ namespace Controllers
         {
             return contexto.Usuarios.ToList();
         }
+
     }
 }
