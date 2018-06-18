@@ -13,7 +13,8 @@ namespace Controllers.DAO
     {
         public Contexto() : base("strConn")
         {
-
+            //Apaga e recria a base de dados se houver a mudança nas modelos
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Contexto>());
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
