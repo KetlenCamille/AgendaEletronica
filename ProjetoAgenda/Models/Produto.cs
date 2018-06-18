@@ -10,6 +10,8 @@ namespace Models
     {
         public int IdProduto { get; set; }
 
+        public int idEstabelecimento { get; set; }
+
         public string descricaoProduto { get; set; }
 
         public bool ativoProduto { get; set; }
