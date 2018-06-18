@@ -51,7 +51,7 @@ namespace Controllers
 
         public IList<Produto> ListarPorNome(string nomeProduto)
         {
-            return contexto.Produtos.Where(a => a.descricaoProduto.ToLower() == nomeProduto.ToLower()).ToList();
+            return contexto.Produtos.Where(a => a.descricaoProduto.ToLower() == nomeProduto.ToLower() AND a.ativoProduto == "True").ToList();
         }
 
     }
