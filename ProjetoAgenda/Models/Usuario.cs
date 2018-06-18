@@ -9,6 +9,7 @@ namespace Models
 {
     public class Usuario
     {
+        [Key]
         public int IdUsuario { get; set; }
 
         [Required, StringLength(70)]
