@@ -48,5 +48,6 @@ namespace Controllers
         {
             return contexto.EnderecoEstabelecimentos.ToList();
         }
+
     }
 }
