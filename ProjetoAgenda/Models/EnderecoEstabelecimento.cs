@@ -14,5 +14,6 @@ namespace Models
         public string bairro { get; set; }
         public string cidade { get; set; }
         public string uf { get; set; }
+
     }
 }
