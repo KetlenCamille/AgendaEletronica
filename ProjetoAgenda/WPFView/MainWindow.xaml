@@ -8,6 +8,9 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Button x:Name="cadastrarUsuario" Content="Cadastar Usuário" HorizontalAlignment="Left" Margin="356,234,0,0" VerticalAlignment="Top" Width="128" Click="button_Click" Height="58"/>
-
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="176,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181" Height="26" Grid.Column="1"/>
+        <Label x:Name="label" Content="E-mail:" HorizontalAlignment="Left" Margin="95,65,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Senha:" HorizontalAlignment="Left" Margin="96,95,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="194,65,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,20 @@ namespace WPFView
         public CadastroUsuario()
         {
             InitializeComponent();
+        }
+
+        private void buttonCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+            Usuario usuarioView = new Usuario();
+
+            usuarioView.NomeUsuario = nomeUsuario.Text;
+            usuarioView.cpfUsuario = cpfUsuario.Text;
+            usuarioView.dataNascimentoUsuario = datanascUsuario.SelectedDate.Value;
+            usuarioView.emailUsuario = emailUsuario.Text;
+            usuarioView.senhaUsuario = senhaUsuario.Text;
+
+            UsuarioController usuContr = new UsuarioController();
+            usuContr.Cadastrar(usuarioView);
         }
     }
 }
