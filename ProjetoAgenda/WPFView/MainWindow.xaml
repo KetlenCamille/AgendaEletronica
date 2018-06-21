@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button x:Name="cadastrarUsuario" Content="Cadastar Usuário" HorizontalAlignment="Left" Margin="356,234,0,0" VerticalAlignment="Top" Width="128" Click="button_Click" Height="58"/>
+        <Button x:Name="cadastrarUsuario" Content="Cadastar Usuário" HorizontalAlignment="Left" Margin="356,234,0,0" VerticalAlignment="Top" Width="128" Height="58"/>
 
     </Grid>
 </Window>

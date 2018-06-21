@@ -49,10 +49,10 @@ namespace Controllers
             return contexto.Produtos.ToList();
         }
 
-        public IList<Produto> ListarPorNome(string nomeProduto)
-        {
-            return contexto.Produtos.Where(a => a.descricaoProduto.ToLower() == nomeProduto.ToLower() AND a.ativoProduto == "True").ToList();
-        }
+        //public IList<Produto> ListarPorNome(string nomeProduto)
+        //{
+         //   return contexto.Produtos.Where(a => a.descricaoProduto.ToLower() == nomeProduto.ToLower() AND a.ativoProduto == "True").ToList();
+       // }
 
     }
 }
