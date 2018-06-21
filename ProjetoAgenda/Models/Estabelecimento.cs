@@ -16,6 +16,7 @@ namespace Models
         public string telefoneEstabelecimento { get; set; }
         public string websiteEstabelecimento { get; set; }
         public string emailEstabelecimento { get; set; }
+        public string senhaE { get; set; }
 
         public ICollection<Produto> ProdutosPorEstabelecimento { get; set; }
     }
