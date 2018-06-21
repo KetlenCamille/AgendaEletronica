@@ -18,13 +18,15 @@ namespace Controllers
             return contexto.Produtos.Find(idProduto);
         }
 
-        public void Cadastrar(Produto produto)
+        public int Cadastrar(Produto produto)
         {
             if(produto == null)
             {
                 contexto.Produtos.Add(produto);
                 contexto.SaveChanges();
+                return 1;
             }
+            return 0;
         }
     
         public void Editar(Produto produto)

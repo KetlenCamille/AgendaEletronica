@@ -18,13 +18,15 @@ namespace Controllers
             return contexto.EnderecoEstabelecimentos.Find(idEndereco);
         }
 
-        public void Cadastrar(EnderecoEstabelecimento enderecoestabelecimento)
+        public int Cadastrar(EnderecoEstabelecimento enderecoestabelecimento)
         {
             if(enderecoestabelecimento == null)
             {
                 contexto.EnderecoEstabelecimentos.Add(enderecoestabelecimento);
                 contexto.SaveChanges();
+                return 1;
             }
+            return 0;
         }
 
         public void Editar(EnderecoEstabelecimento enderecoestabelecimento)

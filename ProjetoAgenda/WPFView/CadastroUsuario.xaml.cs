@@ -37,7 +37,18 @@ namespace WPFView
             usuarioView.senhaUsuario = senhaUsuario.Text;
 
             UsuarioController usuContr = new UsuarioController();
-            usuContr.Cadastrar(usuarioView);
+            int resp = usuContr.Cadastrar(usuarioView);
+
+            if(resp == 1)
+            {
+                MessageBox.Show("Cadastrado com Sucesso!");
+            }
+            else if (resp == 0)
+            {
+                MessageBox.Show("Houston, temos um problema");
+            }
+
+            this.Close();
         }
     }
 }

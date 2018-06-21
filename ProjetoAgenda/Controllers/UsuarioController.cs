@@ -18,13 +18,15 @@ namespace Controllers
             return contexto.Usuarios.Find(idUsuario);
         }
 
-        public void Cadastrar(Usuario usuario)
+        public int Cadastrar(Usuario usuario)
         {
             if(usuario != null)
             {
                 contexto.Usuarios.Add(usuario);
                 contexto.SaveChanges();
+                return 1;
             }
+            return 0;
         }
 
         public void Editar(Usuario usuario)

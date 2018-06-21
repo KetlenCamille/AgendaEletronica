@@ -18,13 +18,15 @@ namespace Controllers
             return contexto.Estabelecimentos.Find(idEstabelecimento);
         }
 
-        public void Cadastrar(Estabelecimento estabelecimento)
+        public int Cadastrar(Estabelecimento estabelecimento)
         {
             if(estabelecimento == null)
             {
                 contexto.Estabelecimentos.Add(estabelecimento);
                 contexto.SaveChanges();
+                return 1;
             }
+            return 0;
         }
 
         public void Editar(Estabelecimento estabelecimento)

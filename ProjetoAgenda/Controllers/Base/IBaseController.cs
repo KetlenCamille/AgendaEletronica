@@ -8,7 +8,7 @@ namespace Controllers.Base
 {
     interface IBaseController<T> where T : class
     {
-        void Cadastrar(T entity);
+        int Cadastrar(T entity);
 
         IList<T> ListarTodos();
 
