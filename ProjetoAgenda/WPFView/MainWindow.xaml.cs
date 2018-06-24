@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Controllers;
 
 namespace WPFView
 {
@@ -31,5 +32,32 @@ namespace WPFView
             CadastroUsuario cadUsu = new CadastroUsuario();
             cadUsu.Show();
         }
+
+        private void login(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string emailView = emailLogin.Text;
+                string senhaView = senhaLogin.Text;
+
+                UsuarioController usuController = new UsuarioController();
+
+                if (usuController.Autenticar(emailView, senhaView))
+                {
+                    Home home = new Home();
+                    home.Show();
+                }
+                else {
+                    MessageBox.Show("E-mail e/ou senha inválidos!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex);
+            }
+           
+        }
+
+
     }
 }
