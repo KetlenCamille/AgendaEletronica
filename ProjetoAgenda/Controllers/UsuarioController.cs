@@ -51,5 +51,17 @@ namespace Controllers
             return contexto.Usuarios.ToList();
         }
 
+        public bool Autenticar(string emailView, string senhaView)
+        {
+            foreach (Usuario usuario in ListarTodos())
+            {
+                if(usuario.emailUsuario == emailView && usuario.senhaUsuario == senhaView)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }
