@@ -19,7 +19,9 @@ namespace Models
         [Required, StringLength(50)]
         public string nomeFantasia { get; set; }
 
+        [Required]
         public string categoria { get; set; }
+
         [Required, StringLength(15)]
         public string telefoneEstabelecimento { get; set; }
 

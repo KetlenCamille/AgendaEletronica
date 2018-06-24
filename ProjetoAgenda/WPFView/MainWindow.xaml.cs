@@ -31,5 +31,11 @@ namespace WPFView
             CadastroUsuario cadUsu = new CadastroUsuario();
             cadUsu.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            CadastroEstabelecimento cadEst = new CadastroEstabelecimento();
+            cadEst.Show();
+        }
     }
 }
