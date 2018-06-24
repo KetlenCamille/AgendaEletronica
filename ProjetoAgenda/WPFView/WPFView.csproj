@@ -64,6 +64,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CadastroEnderecoEstabelecimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CadastroEstabelecimento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -79,6 +83,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CadastroEnderecoEstabelecimento.xaml.cs">
+      <DependentUpon>CadastroEnderecoEstabelecimento.xaml</DependentUpon>
     </Compile>
     <Compile Include="CadastroEstabelecimento.xaml.cs">
       <DependentUpon>CadastroEstabelecimento.xaml</DependentUpon>

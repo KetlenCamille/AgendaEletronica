@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace WPFView
 {
     /// <summary>
-    /// Interaction logic for CadastroEstabelecimento.xaml
+    /// Interaction logic for CadastroEnderecoEstabelecimento.xaml
     /// </summary>
-    public partial class CadastroEstabelecimento : Window
+    public partial class CadastroEnderecoEstabelecimento : Window
     {
-        public CadastroEstabelecimento()
+        public CadastroEnderecoEstabelecimento()
         {
             InitializeComponent();
-        }
-
-        private void proximo_Click(object sender, RoutedEventArgs e)
-        {
-            CadastroEnderecoEstabelecimento cadEndereco = new CadastroEnderecoEstabelecimento();
-            cadEndereco.Show();
         }
     }
 }
