@@ -44,7 +44,7 @@ namespace WPFView
             try
             {
                 string emailView = email.Text;
-                string senhaView = senha.Text;
+                string senhaView = senha.Password;
 
                 UsuarioController usuController = new UsuarioController();
 
