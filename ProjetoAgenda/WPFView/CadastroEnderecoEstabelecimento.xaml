@@ -1,0 +1,23 @@
+﻿<Window x:Class="WPFView.CadastroEnderecoEstabelecimento"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFView"
+        mc:Ignorable="d"
+        Title="CadastroEnderecoEstabelecimento" Height="450" Width="800">
+    <Grid>
+        <Label Content="Dados de Endereço:" HorizontalAlignment="Left" Margin="23,22,0,0" VerticalAlignment="Top"/>
+        <Label Content="Logradouro:" HorizontalAlignment="Left" Margin="70,53,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="logradouro" HorizontalAlignment="Left" Height="23" Margin="150,57,0,0" TextWrapping="Wrap" Text="Logradouro" VerticalAlignment="Top" Width="464"/>
+        <Label Content="Número:" HorizontalAlignment="Left" Margin="70,107,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="numero" HorizontalAlignment="Left" Height="23" Margin="131,110,0,0" TextWrapping="Wrap" Text="Número" VerticalAlignment="Top" Width="77"/>
+        <Label Content="Bairro:" HorizontalAlignment="Left" Margin="292,106,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="bairro" HorizontalAlignment="Left" Height="23" Margin="346,109,0,0" TextWrapping="Wrap" Text="Bairro" VerticalAlignment="Top" Width="268"/>
+        <Label Content="Cidade:" HorizontalAlignment="Left" Margin="70,156,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.895,0"/>
+        <TextBox x:Name="cidade" HorizontalAlignment="Left" Height="23" Margin="131,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Text="Cidade"/>
+        <Label Content="UF: " HorizontalAlignment="Left" Margin="459,161,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="uf" HorizontalAlignment="Left" Margin="494,161,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

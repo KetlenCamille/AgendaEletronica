@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFView"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="450" Width="650">
     <Grid>
-        <Button x:Name="cadastrarUsuario" Content="Cadastar Usuário" HorizontalAlignment="Left" Margin="356,234,0,0" VerticalAlignment="Top" Width="128" Click="button_Click" Height="58"/>
-        <Label x:Name="label" Content="E-mail:" HorizontalAlignment="Left" Margin="95,65,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Senha:" HorizontalAlignment="Left" Margin="96,95,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="emailLogin" HorizontalAlignment="Left" Height="23" Margin="155,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
-        <Button x:Name="logarUsuario" Content="Login" HorizontalAlignment="Left" Margin="187,138,0,0" VerticalAlignment="Top" Width="148" Click="login" Height="21"/>
-        <PasswordBox x:Name="senhaUsuario" HorizontalAlignment="Left" Margin="155,104,0,0" VerticalAlignment="Top" Width="202" Height="17"/>
+        <Button x:Name="cadastrarUsuario" Content="Cadastar Usuário" HorizontalAlignment="Left" Margin="349,354,0,0" VerticalAlignment="Top" Width="150" Click="button_Click" Height="38"/>
+        <Label x:Name="label" Content="E-mail:" HorizontalAlignment="Left" Margin="298,127,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Senha:" HorizontalAlignment="Left" Margin="298,197,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="23" Margin="214,158,0,0" TextWrapping="Wrap" Text="E-Mail" VerticalAlignment="Top" Width="212"/>
+        <Button x:Name="cadastrarEstabelecimento" Content="Cadastrar Estabelecimento" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="144,354,0,0" Height="38"/>
+        <TextBox x:Name="senha" HorizontalAlignment="Left" Height="24" Margin="214,228,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" Width="212"/>
+        <Button x:Name="entrar" Content="Entrar" HorizontalAlignment="Left" Margin="283,272,0,0" VerticalAlignment="Top" Width="75"/>
+        <Image HorizontalAlignment="Left" Source="logoprojeto.png"  Height="112" Margin="214,15,0,0" VerticalAlignment="Top" Width="208"/>
     </Grid>
 </Window>
