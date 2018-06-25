@@ -33,7 +33,7 @@ namespace WPFView
             cadUsu.Show();
         }
 
-        private void login(object sender, RoutedEventArgs e)
+        private void buttonEntrar_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -47,7 +47,8 @@ namespace WPFView
                     Home home = new Home();
                     home.Show();
                 }
-                else {
+                else
+                {
                     MessageBox.Show("E-mail e/ou senha inválidos!");
                 }
             }
@@ -55,9 +56,6 @@ namespace WPFView
             {
                 MessageBox.Show("Exception: " + ex);
             }
-           
         }
-
-
     }
 }

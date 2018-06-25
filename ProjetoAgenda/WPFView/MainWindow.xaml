@@ -13,7 +13,7 @@
         <TextBox x:Name="email" HorizontalAlignment="Left" Height="23" Margin="214,158,0,0" TextWrapping="Wrap" Text="E-Mail" VerticalAlignment="Top" Width="212"/>
         <Button x:Name="cadastrarEstabelecimento" Content="Cadastrar Estabelecimento" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="144,354,0,0" Height="38"/>
         <TextBox x:Name="senha" HorizontalAlignment="Left" Height="24" Margin="214,228,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" Width="212"/>
-        <Button x:Name="entrar" Content="Entrar" HorizontalAlignment="Left" Margin="283,272,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="entrar" Content="Entrar" HorizontalAlignment="Left" Margin="283,270,0,0" VerticalAlignment="Top" Width="75" Click="buttonEntrar_Click"/>
         <Image HorizontalAlignment="Left" Source="logoprojeto.png"  Height="112" Margin="214,15,0,0" VerticalAlignment="Top" Width="208"/>
     </Grid>
 </Window>
