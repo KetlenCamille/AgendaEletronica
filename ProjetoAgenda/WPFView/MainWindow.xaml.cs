@@ -27,6 +27,12 @@ namespace WPFView
             InitializeComponent();
         }
 
+        private void Listar_Click(object sender, RoutedEventArgs e)
+        {
+            Listar list = new Listar();
+            list.Show();
+      }
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
             CadastroUsuario cadUsu = new CadastroUsuario();

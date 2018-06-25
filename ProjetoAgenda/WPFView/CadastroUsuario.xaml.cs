@@ -36,7 +36,7 @@ namespace WPFView
                 usuarioView.cpfUsuario = cpfUsuario.Text;
                 usuarioView.dataNascimentoUsuario = datanascUsuario.SelectedDate.Value;
                 usuarioView.emailUsuario = emailUsuario.Text;
-                usuarioView.senhaUsuario = senhaUsuario.Text;
+                usuarioView.senhaUsuario = senhaUsuario.Password;
 
                 UsuarioController usuContr = new UsuarioController();
                 int resp = usuContr.Cadastrar(usuarioView);
