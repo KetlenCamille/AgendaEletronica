@@ -15,10 +15,13 @@ namespace Models
         [Required, StringLength(70)]
         public string NomeUsuario { get; set; }
 
+        [Required, StringLength(11)]
         public string  cpfUsuario { get; set; }
 
+        [Required]
         public DateTime dataNascimentoUsuario { get; set; }
 
+        [Required, StringLength(15)]
         public string telefoneUsuario { get; set; }
 
         [Required, StringLength(150)]

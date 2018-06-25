@@ -5,24 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFView"
         mc:Ignorable="d"
-        Title="CadastroUsuario" Height="300" Width="350">
+        Title="CadastroUsuario" Height="400" Width="350">
     <Grid Margin="0,6,0,-6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="215*"/>
             <ColumnDefinition Width="127*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="label" Content="Nome: " HorizontalAlignment="Left" Margin="54,25,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="nomeUsuario" HorizontalAlignment="Left" Height="23" Margin="103,28,0,0" TextWrapping="Wrap" Text="Digite seu nome" VerticalAlignment="Top" Width="173"  RenderTransformOrigin="0.533,1.261" Grid.ColumnSpan="2"/>
-        <Label x:Name="label_Copy" Content="Cpf:" HorizontalAlignment="Left" Margin="58,52,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="cpfUsuario" HorizontalAlignment="Left" Height="23" Margin="103,56,0,0" TextWrapping="Wrap" Text="Digite seu CPF" VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.533,1.261" Grid.ColumnSpan="2"/>
-        <Label x:Name="label_Copy1" Content="DN:" HorizontalAlignment="Left" Margin="59,85,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy2" Content="E-mail:" HorizontalAlignment="Left" Margin="59,141,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
-        <TextBox x:Name="emailUsuario" HorizontalAlignment="Left" Height="23" Margin="108,144,0,0" TextWrapping="Wrap" Text="Digite seu e-mail" VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.533,1.261" Grid.ColumnSpan="2"/>
-        <Label x:Name="label_Copy3" Content="Dados p/ Login:" HorizontalAlignment="Left" Margin="21,114,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
+        <TextBox x:Name="nomeUsuario" HorizontalAlignment="Left" Height="25" Margin="108,25,0,0" TextWrapping="Wrap" Text="Digite seu nome" VerticalAlignment="Top" Width="173"  RenderTransformOrigin="0.533,1.261" Grid.ColumnSpan="2"/>
+        <Label x:Name="label_Copy" Content="CPF:" HorizontalAlignment="Left" Margin="54,56,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="cpfUsuario" HorizontalAlignment="Left" Height="25" Margin="92,56,0,0" TextWrapping="Wrap" Text="Digite seu CPF" VerticalAlignment="Top" Width="189" RenderTransformOrigin="0.533,1.261" Grid.ColumnSpan="2"/>
+        <Label x:Name="label_Copy1" Content="Data nasc.:" HorizontalAlignment="Left" Margin="54,87,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy2" Content="E-mail:" HorizontalAlignment="Left" Margin="59,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
+        <TextBox x:Name="emailUsuario" HorizontalAlignment="Left" Height="25" Margin="108,197,0,0" TextWrapping="Wrap" Text="Digite seu e-mail" VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.533,1.261" Grid.ColumnSpan="2"/>
+        <Label x:Name="label_Copy3" Content="Dados p/ Login:" HorizontalAlignment="Left" Margin="21,167,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
         <Label x:Name="label_Copy4" Content="Dados pessoais:" HorizontalAlignment="Left" Margin="21,-1,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy5" Content="Senha:" HorizontalAlignment="Left" Margin="59,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
-        <TextBox x:Name="senhaUsuario" HorizontalAlignment="Left" Height="23" Margin="108,172,0,0" TextWrapping="Wrap" Text="Digite sua senha" VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.533,1.261" Grid.ColumnSpan="2"/>
-        <Button x:Name="buttonCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="137,218,0,0" VerticalAlignment="Top" Width="75" Click="buttonCadastrar_Click"/>
-        <DatePicker x:Name="datanascUsuario" HorizontalAlignment="Left" Margin="104,85,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="172"/>
+        <Label x:Name="label_Copy5" Content="Senha:" HorizontalAlignment="Left" Margin="59,224,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
+        <PasswordBox x:Name="senhaUsuario" HorizontalAlignment="Left" Margin="109,227,0,0" VerticalAlignment="Top" Width="172" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="123,288,0,0" VerticalAlignment="Top" Width="98" Click="buttonCadastrar_Click" Grid.ColumnSpan="2"/>
+        <DatePicker x:Name="datanascUsuario" HorizontalAlignment="Left" Margin="126,84,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="155"/>
+        <Label Content="Telefone:" HorizontalAlignment="Left" Margin="54,118,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="telefone" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="25" Margin="116,119,0,0" TextWrapping="Wrap" Text="(xx) xxxx-xxxx" VerticalAlignment="Top" Width="165"/>
     </Grid>
 </Window>
