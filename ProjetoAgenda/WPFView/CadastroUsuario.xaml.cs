@@ -35,6 +35,7 @@ namespace WPFView
                 usuarioView.NomeUsuario = nomeUsuario.Text;
                 usuarioView.cpfUsuario = cpfUsuario.Text;
                 usuarioView.dataNascimentoUsuario = datanascUsuario.SelectedDate.Value;
+                usuarioView.telefoneUsuario = telefone.Text;
                 usuarioView.emailUsuario = emailUsuario.Text;
                 usuarioView.senhaUsuario = senhaUsuario.Password;
 
