@@ -60,14 +60,33 @@ namespace WPFView
             } 
         }
 
-        private void Limpar (object sender, RoutedEventArgs e)
+        private void LimparNome (object sender, RoutedEventArgs e)
         {
             string campo = nomeUsuario.Text;
-            //string comp = "Digite seu nome";
 
-            if (campo.Equals("Digite seu nome") )
+            if (campo.Equals("Digite seu nome"))
             {
                 nomeUsuario.Clear();
+            }
+        }
+
+        private void LimparCpf(object sender, MouseEventArgs e)
+        {
+            string campo = cpfUsuario.Text;
+
+            if (campo.Equals("Digite seu CPF"))
+            {
+                cpfUsuario.Clear();
+            }
+        }
+
+        private void LimparTelefone(object sender, MouseEventArgs e)
+        {
+            string campo = telefone.Text;
+
+            if (campo.Equals("(xx) xxxx-xxxx"))
+            {
+                telefone.Clear();
             }
         }
     }

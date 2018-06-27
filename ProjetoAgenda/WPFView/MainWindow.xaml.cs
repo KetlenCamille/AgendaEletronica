@@ -35,14 +35,15 @@ namespace WPFView
 
         private void cadastraUsuario(object sender, RoutedEventArgs e)
         {
-            CadastroUsuario cadUsu = new CadastroUsuario();
-            cadUsu.Show();
+            CadastroUsuario cadastroUsuario = new CadastroUsuario();
+            cadastroUsuario.Show();
         }
 
-        private void cadastraEstabelecimento(object sender, RoutedEventArgs e)
+        private void cadastraEstabelecimento_Click(object sender, RoutedEventArgs e)
         {
-            CadastroEstabelecimento cadEst = new CadastroEstabelecimento();
-            cadEst.Show();
+            CadastroEstabelecimento cadastroEstacionamento = new CadastroEstabelecimento();
+            cadastroEstacionamento.Show();
+            
         }
 
         private void login(object sender, RoutedEventArgs e)

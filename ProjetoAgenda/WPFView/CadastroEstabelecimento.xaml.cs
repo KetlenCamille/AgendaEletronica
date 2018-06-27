@@ -41,12 +41,13 @@ namespace WPFView
                 estabelecimentoView.emailEstabelecimento = email.Text;
                 estabelecimentoView.senhaE = senha.Password;
 
-                EstabelecimentoController estController = new EstabelecimentoController();
-                int resp = estController.Cadastrar(estabelecimentoView);
+                EstabelecimentoController estacionamentoController = new EstabelecimentoController();
+                int resp = estacionamentoController.Cadastrar(estabelecimentoView);
 
                 if (resp == 1)
                 {
-                    MessageBox.Show("Cadastrado com Sucesso!");
+                    CadastroEnderecoEstabelecimento cadEndereco = new CadastroEnderecoEstabelecimento();
+                    cadEndereco.Show();
                 }
                 else if (resp == 0)
                 {
@@ -59,10 +60,7 @@ namespace WPFView
             {
                 MessageBox.Show("Ligue para o suporte: " + ex);
 
-            }
-
-            CadastroEnderecoEstabelecimento cadEndereco = new CadastroEnderecoEstabelecimento();
-            cadEndereco.Show();
+            } 
         }
     }
 }

@@ -11,20 +11,20 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Label x:Name="label" Content="Nome: " HorizontalAlignment="Left" Margin="54,25,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="nomeUsuario" HorizontalAlignment="Left" Height="25" Margin="108,25,0,0" TextWrapping="Wrap" Text="Digite seu nome" VerticalAlignment="Top" Width="173"  RenderTransformOrigin="0.533,1.261"  GotMouseCapture="Limpar"/>
-        <Label x:Name="label_Copy" Content="CPF:" HorizontalAlignment="Left" Margin="54,56,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="cpfUsuario" HorizontalAlignment="Left" Height="25" Margin="92,56,0,0" TextWrapping="Wrap" Text="Digite seu CPF" VerticalAlignment="Top" Width="189" RenderTransformOrigin="0.533,1.261"/>
-        <Label x:Name="label_Copy1" Content="Data nasc.:" HorizontalAlignment="Left" Margin="54,87,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy2" Content="E-mail:" HorizontalAlignment="Left" Margin="59,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
+        <Label Content="Nome: " HorizontalAlignment="Left" Margin="54,25,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nomeUsuario" HorizontalAlignment="Left" Height="25" Margin="108,25,0,0" TextWrapping="Wrap" Text="Digite seu nome" VerticalAlignment="Top" Width="173"  RenderTransformOrigin="0.533,1.261"  GotMouseCapture="LimparNome"/>
+        <Label Content="CPF:" HorizontalAlignment="Left" Margin="54,56,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="cpfUsuario" HorizontalAlignment="Left" Height="25" Margin="92,56,0,0" TextWrapping="Wrap" Text="Digite seu CPF" VerticalAlignment="Top" Width="189" RenderTransformOrigin="0.533,1.261" GotMouseCapture="LimparCpf"/>
+        <Label Content="Data nasc.:" HorizontalAlignment="Left" Margin="54,87,0,0" VerticalAlignment="Top"/>
+        <Label Content="E-mail:" HorizontalAlignment="Left" Margin="59,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
         <TextBox x:Name="emailUsuario" HorizontalAlignment="Left" Height="25" Margin="108,197,0,0" TextWrapping="Wrap" Text="Digite seu e-mail" VerticalAlignment="Top" Width="173" RenderTransformOrigin="0.533,1.261"/>
-        <Label x:Name="label_Copy3" Content="Dados p/ Login:" HorizontalAlignment="Left" Margin="21,167,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
-        <Label x:Name="label_Copy4" Content="Dados pessoais:" HorizontalAlignment="Left" Margin="21,-1,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dados p/ Login:" HorizontalAlignment="Left" Margin="21,167,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
+        <Label Content="Dados pessoais:" HorizontalAlignment="Left" Margin="21,-1,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label_Copy5" Content="Senha:" HorizontalAlignment="Left" Margin="59,224,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
         <PasswordBox x:Name="senhaUsuario" HorizontalAlignment="Left" Margin="109,227,0,0" VerticalAlignment="Top" Width="172"/>
         <Button x:Name="buttonCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="123,288,0,0" VerticalAlignment="Top" Width="98" Click="buttonCadastrar_Click"/>
         <DatePicker x:Name="datanascUsuario" HorizontalAlignment="Left" Margin="126,84,0,0" VerticalAlignment="Top" Width="155"/>
         <Label Content="Telefone:" HorizontalAlignment="Left" Margin="54,118,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="telefone" HorizontalAlignment="Left" Height="25" Margin="116,119,0,0" TextWrapping="Wrap" Text="(xx) xxxx-xxxx" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="telefone" HorizontalAlignment="Left" Height="25" Margin="116,119,0,0" TextWrapping="Wrap" Text="(xx) xxxx-xxxx" VerticalAlignment="Top" Width="165" GotMouseCapture="LimparTelefone"/>
     </Grid>
 </Window>
