@@ -39,12 +39,12 @@ namespace WPFView
             cadUsu.Show();
         }
 
-        private void buttonEntrar_Click(object sender, RoutedEventArgs e)
+        private void login(object sender, RoutedEventArgs e)
         {
             try
             {
                 string emailView = email.Text;
-                string senhaView = senha.Text;
+                string senhaView = senha.Password;
 
                 UsuarioController usuController = new UsuarioController();
 
