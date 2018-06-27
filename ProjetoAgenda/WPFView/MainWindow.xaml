@@ -15,10 +15,10 @@
         <TextBox x:Name="email" HorizontalAlignment="Left" Height="23" Margin="214,158,0,0" TextWrapping="Wrap" Text="E-Mail" VerticalAlignment="Top" Width="212"/>
         <Button x:Name="cadastrarEstabelecimento" Content="Estabelecimento" HorizontalAlignment="Left" VerticalAlignment="Top" Width="139" Margin="326,413,0,0" Height="38"/>
         <PasswordBox x:Name="senha" HorizontalAlignment="Left" Height="24" Margin="214,228,0,0" VerticalAlignment="Top" Width="212"/>
-        <Button x:Name="entrar" Content="Entrar" HorizontalAlignment="Left" Margin="283,333,0,0" VerticalAlignment="Top" Width="75" Click="login"/>
+        <Button x:Name="entrar" Content="Entrar" HorizontalAlignment="Left" Margin="283,333,0,0" VerticalAlignment="Top" Width="75" Click="buttonEntrar_Click"/>
         <Image HorizontalAlignment="Left" Source="logoprojeto.png"  Height="112" Margin="214,3,0,0" VerticalAlignment="Top" Width="208"/>
         <Label Content="Cadastre-se" HorizontalAlignment="Left" Margin="182,382,0,0" VerticalAlignment="Top"/>
-        <Label Content="O que eu sou?" HorizontalAlignment="Left" Margin="214,263,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.934,0.538"/>
+        <Label Content="O que sou?" HorizontalAlignment="Left" Margin="214,263,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.934,0.538"/>
         <RadioButton x:Name="usuario" Content="Usuário" HorizontalAlignment="Left" Margin="214,287,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="estabelecimento" Content="Estabelecimento" HorizontalAlignment="Left" Margin="318,289,0,0" VerticalAlignment="Top"/>
         <Label Content="Redes Sociais" HorizontalAlignment="Left" Margin="525,4,0,0" VerticalAlignment="Top"/>

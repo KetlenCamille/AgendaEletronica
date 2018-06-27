@@ -35,6 +35,7 @@ namespace WPFView
                 usuarioView.NomeUsuario = nomeUsuario.Text;
                 usuarioView.cpfUsuario = cpfUsuario.Text;
                 usuarioView.dataNascimentoUsuario = datanascUsuario.SelectedDate.Value;
+                usuarioView.telefoneUsuario = telefone.Text;
                 usuarioView.emailUsuario = emailUsuario.Text;
                 usuarioView.senhaUsuario = senhaUsuario.Password;
 
@@ -57,6 +58,17 @@ namespace WPFView
                 MessageBox.Show("Ligue para o suporte: " + ex);
 
             } 
+        }
+
+        private void Limpar (object sender, RoutedEventArgs e)
+        {
+            string campo = nomeUsuario.Text;
+            //string comp = "Digite seu nome";
+
+            if (campo.Equals("Digite seu nome") )
+            {
+                nomeUsuario.Clear();
+            }
         }
     }
 }
