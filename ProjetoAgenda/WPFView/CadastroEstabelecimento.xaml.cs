@@ -26,7 +26,7 @@ namespace WPFView
             InitializeComponent();
         }
 
-        private void proximo(object sender, RoutedEventArgs e)
+        private void proximo_Click(object sender, RoutedEventArgs e)
         {
 
             try

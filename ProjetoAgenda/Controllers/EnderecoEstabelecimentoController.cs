@@ -20,7 +20,7 @@ namespace Controllers
 
         public int Cadastrar(EnderecoEstabelecimento enderecoestabelecimento)
         {
-            if(enderecoestabelecimento == null)
+            if(enderecoestabelecimento != null)
             {
                 contexto.EnderecoEstabelecimentos.Add(enderecoestabelecimento);
                 contexto.SaveChanges();
