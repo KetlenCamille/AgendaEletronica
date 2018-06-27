@@ -26,7 +26,7 @@ namespace WPFView
             InitializeComponent();
         }
 
-        private void proximo(object sender, RoutedEventArgs e)
+        private void proximo_Click(object sender, RoutedEventArgs e)
         {
 
             try
@@ -46,7 +46,7 @@ namespace WPFView
 
                 if (resp == 1)
                 {
-                    MessageBox.Show("Cadastrado com Sucesso!");
+                    MessageBox.Show("Dados salvos com Sucesso!");
                 }
                 else if (resp == 0)
                 {

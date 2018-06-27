@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Controllers;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,24 @@ namespace WPFView
                 enderecoEstView.bairro = bairro.Text;
                 enderecoEstView.cidade = cidade.Text;
                 enderecoEstView.uf = uf.Text;
+
+                EnderecoEstabelecimentoController enderecoEstController = new EnderecoEstabelecimentoController();
+                int resp = enderecoEstController.Cadastrar(enderecoEstView);
+
+                if(resp == 1)
+                {
+                    MessageBox.Show("Cadastrado com sucesso!");
+                }
+                else if(resp == 0)
+                {
+                    MessageBox.Show("Houston, temos um problema!");
+                }
+
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Ligue para o suporte: " + ex);
             }
         }
     }
