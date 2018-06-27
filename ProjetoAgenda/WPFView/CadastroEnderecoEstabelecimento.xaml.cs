@@ -31,12 +31,11 @@ namespace WPFView
             {
                 EnderecoEstabelecimento enderecoEstView = new EnderecoEstabelecimento();
 
-                enderecoEstView =
-                enderecoEstView =
-                enderecoEstView =
-                enderecoEstView =
-                enderecoEstView =
-                enderecoEstView =
+                enderecoEstView.logradouroEstabelecimento = logradouro.Text;
+                enderecoEstView.numero = numero.Text;
+                enderecoEstView.bairro = bairro.Text;
+                enderecoEstView.cidade = cidade.Text;
+                enderecoEstView.uf = uf.Text;
             }
         }
     }
