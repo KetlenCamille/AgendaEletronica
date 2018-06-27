@@ -13,7 +13,7 @@
         <Label Content="Nome Fantasia:" HorizontalAlignment="Left" Margin="16,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.114,0.526"/>
         <TextBox x:Name="nomeFantasia" HorizontalAlignment="Left" Height="25" Margin="114,43,0,0" TextWrapping="Wrap" Text="Digite o nome fantasia" VerticalAlignment="Top" Width="191"/>
         <Label Content="Categoria:" HorizontalAlignment="Left" Margin="41,117,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="114,118,0,0" VerticalAlignment="Top" Width="196" SelectedIndex="0">
+        <ComboBox x:Name="categoria"  HorizontalAlignment="Left" Margin="114,118,0,0" VerticalAlignment="Top" Width="196" SelectedIndex="0">
             <ComboBoxItem Content="Banco"/>
             <ComboBoxItem Content="Estacionamento"/>
             <ComboBoxItem Content="Farmácia"/>
@@ -32,7 +32,7 @@
         <Button x:Name="proximo" Content="Próximo >>" HorizontalAlignment="Left" Margin="210,333,0,0" VerticalAlignment="Top" Width="113" Height="29" Click="proximo_Click"/>
         <PasswordBox x:Name="senha" HorizontalAlignment="Left" Margin="114,296,0,0" VerticalAlignment="Top" Width="196"/>
         <Label x:Name="email" Content="E-mail:" HorizontalAlignment="Left" Margin="49,263,0,0" VerticalAlignment="Top"/>
-        <TextBox Text="Digite seu e-mail" HorizontalAlignment="Left" Height="25" Margin="114,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" TextChanged="textBox_TextChanged"/>
+        <TextBox Text="Digite seu e-mail" HorizontalAlignment="Left" Height="25" Margin="114,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
         <Label Content="Dados do Login:" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" BorderThickness="0" FontWeight="Bold" />
 
     </Grid>

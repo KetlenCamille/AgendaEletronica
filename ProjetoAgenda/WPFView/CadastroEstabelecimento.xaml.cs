@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,12 +23,6 @@ namespace WPFView
         public CadastroEstabelecimento()
         {
             InitializeComponent();
-        }
-
-        private void proximo_Click(object sender, RoutedEventArgs e)
-        {
-            CadastroEnderecoEstabelecimento cadEndereco = new CadastroEnderecoEstabelecimento();
-            cadEndereco.Show();
         }
     }
 }
