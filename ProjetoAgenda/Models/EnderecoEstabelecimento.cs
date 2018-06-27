@@ -16,7 +16,7 @@ namespace Models
         public string logradouroEstabelecimento { get; set; }
 
         [Required]
-        public int numero { get; set; }
+        public string numero { get; set; }
 
         [Required]
         public string bairro { get; set; }
