@@ -5,19 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFView"
         mc:Ignorable="d"
-        Title="CadastroEnderecoEstabelecimento" Height="450" Width="800">
+        Title="CadastroEnderecoEstabelecimento" Height="400" Width="350">
     <Grid>
-        <Label Content="Dados de Endereço:" HorizontalAlignment="Left" Margin="23,22,0,0" VerticalAlignment="Top"/>
-        <Label Content="Logradouro:" HorizontalAlignment="Left" Margin="70,53,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="logradouro" HorizontalAlignment="Left" Height="23" Margin="150,57,0,0" TextWrapping="Wrap" Text="Logradouro" VerticalAlignment="Top" Width="464"/>
-        <Label Content="Número:" HorizontalAlignment="Left" Margin="70,107,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="numero" HorizontalAlignment="Left" Height="23" Margin="131,110,0,0" TextWrapping="Wrap" Text="Número" VerticalAlignment="Top" Width="77"/>
-        <Label Content="Bairro:" HorizontalAlignment="Left" Margin="292,106,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="bairro" HorizontalAlignment="Left" Height="23" Margin="346,109,0,0" TextWrapping="Wrap" Text="Bairro" VerticalAlignment="Top" Width="268"/>
-        <Label Content="Cidade:" HorizontalAlignment="Left" Margin="70,156,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.895,0"/>
-        <TextBox x:Name="cidade" HorizontalAlignment="Left" Height="23" Margin="131,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Text="Cidade"/>
-        <Label Content="UF: " HorizontalAlignment="Left" Margin="459,161,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="uf" HorizontalAlignment="Left" Margin="494,161,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Dados de Endereço:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Logradouro:" HorizontalAlignment="Left" Margin="44,54,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="logradouro" HorizontalAlignment="Left" Height="25" Margin="124,55,0,0" TextWrapping="Wrap" Text="Logradouro" VerticalAlignment="Top" Width="208"/>
+        <Label Content="Número:" HorizontalAlignment="Left" Margin="44,85,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="numero" HorizontalAlignment="Left" Height="25" Margin="105,85,0,0" TextWrapping="Wrap" Text="Número" VerticalAlignment="Top" Width="77"/>
+        <Label Content="Bairro:" HorizontalAlignment="Left" Margin="44,116,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="bairro" HorizontalAlignment="Left" Height="25" Margin="93,116,0,0" TextWrapping="Wrap" Text="Bairro" VerticalAlignment="Top" Width="239"/>
+        <Label Content="Cidade:" HorizontalAlignment="Left" Margin="44,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.895,0"/>
+        <TextBox x:Name="cidade" HorizontalAlignment="Left" Height="23" Margin="98,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="234" Text="Cidade"/>
+        <Label Content="UF: " HorizontalAlignment="Left" Margin="22,238,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="uf" HorizontalAlignment="Left" Margin="124,238,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Produto:" HorizontalAlignment="Left" Margin="33,295,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="produto" HorizontalAlignment="Left" Height="23" Margin="114,273,0,0" TextWrapping="Wrap" Text="Produto" VerticalAlignment="Top" Width="228"/>
+        <Button x:Name="Cadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="207,313,0,0" VerticalAlignment="Top" Width="101" Click="Cadastrar_Click"/>
 
     </Grid>
 </Window>

@@ -13,7 +13,7 @@
         <Label Content="Nome Fantasia:" HorizontalAlignment="Left" Margin="70,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.114,0.526"/>
         <TextBox x:Name="nomeFantasia" HorizontalAlignment="Left" Height="23" Margin="166,57,0,0" TextWrapping="Wrap" Text="Digite o nome fantasia" VerticalAlignment="Top" Width="333"/>
         <Label Content="Categoria:" HorizontalAlignment="Left" Margin="70,140,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="139,144,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox x:Name="categoria" HorizontalAlignment="Left" Margin="139,144,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Farmácia"/>
             <ComboBoxItem Content="Lanchonete"/>
             <ComboBoxItem Content="Mercado"/>
@@ -28,8 +28,8 @@
         <Label Content="Website:" HorizontalAlignment="Left" Margin="70,233,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="website" HorizontalAlignment="Left" Height="23" Margin="130,237,0,0" TextWrapping="Wrap" Text="Website" VerticalAlignment="Top" Width="213"/>
         <Label Content="Senha:" HorizontalAlignment="Left" Margin="70,281,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="senha" HorizontalAlignment="Left" Height="23" Margin="120,285,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" Width="223"/>
-        <Button x:Name="proximo" Content="Próximo" HorizontalAlignment="Left" Margin="70,347,0,0" VerticalAlignment="Top" Width="128" Height="35" Click="proximo_Click"/>
+        <PasswordBox x:Name="senha" HorizontalAlignment="Left" Height="23" Margin="120,285,0,0" VerticalAlignment="Top" Width="223"/>
+        <Button x:Name="proximo" Content="Próximo" HorizontalAlignment="Left" Margin="70,347,0,0" VerticalAlignment="Top" Width="128" Height="35" Click="proximo"/>
 
     </Grid>
 </Window>
