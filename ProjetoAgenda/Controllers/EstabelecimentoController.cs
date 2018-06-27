@@ -60,5 +60,18 @@ namespace Controllers
         {
             return contexto.Estabelecimentos.Where(a => a.categoria.ToLower() == categoriaE.ToLower()).ToList();
         }
+
+        public bool Autenticar(string emailView, string senhaView)
+        {
+            foreach (Estabelecimento estabelecimento in ListarTodos())
+            {
+                if (estabelecimento.emailEstabelecimento == emailView && estabelecimento.senhaE == senhaView)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }

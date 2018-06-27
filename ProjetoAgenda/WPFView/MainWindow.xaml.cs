@@ -33,10 +33,16 @@ namespace WPFView
             list.Show();
       }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void cadastraUsuario(object sender, RoutedEventArgs e)
         {
             CadastroUsuario cadUsu = new CadastroUsuario();
             cadUsu.Show();
+        }
+
+        private void cadastraEstabelecimento(object sender, RoutedEventArgs e)
+        {
+            CadastroEstabelecimento cadEst = new CadastroEstabelecimento();
+            cadEst.Show();
         }
 
         private void login(object sender, RoutedEventArgs e)
@@ -46,17 +52,41 @@ namespace WPFView
                 string emailView = email.Text;
                 string senhaView = senha.Password;
 
-                UsuarioController usuController = new UsuarioController();
-
-                if (usuController.Autenticar(emailView, senhaView))
+                if((bool)usuario.IsChecked)
                 {
-                    Home home = new Home();
-                    home.Show();
+                    UsuarioController usuController = new UsuarioController();
+
+                    if (usuController.Autenticar(emailView, senhaView))
+                    {
+                        Home home = new Home();
+                        home.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("E-mail e/ou senha inválidos!");
+                    }
+                }
+
+                else if((bool)estabelecimento.IsChecked)
+                {
+                    EstabelecimentoController estController = new EstabelecimentoController();
+
+                    if (estController.Autenticar(emailView, senhaView))
+                    {
+                        Home home = new Home();
+                        home.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("E-mail e/ou senha inválidos!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("E-mail e/ou senha inválidos!");
+                    MessageBox.Show("Selecione uma das opções de login!");
                 }
+
+                
             }
             catch (Exception ex)
             {
