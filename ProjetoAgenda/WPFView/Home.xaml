@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFView"
         xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d" Height="600" Width="1080">
+        mc:Ignorable="d" Height="616" Width="1080">
 
     <Window.Resources>
         <Storyboard x:Key="MenuOpen">
@@ -47,7 +47,7 @@
         </Grid>
         <Grid x:Name="GridMenu" Width="60" HorizontalAlignment="Left" Background="#FF1B3861">
             <StackPanel>
-                <Grid Height="150" Background="White">
+                <Grid Height="100" Background="White">
                     <Button x:Name="ButtonCloseMenu"  Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed" Click="ButtonCloseMenu_Click">
                         <materialDesign:PackIcon Foreground="#FF1B3861" Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button>
@@ -56,6 +56,12 @@
                     </Button>
                 </Grid>
                 <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF13688D">
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Star" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <TextBlock Text="Destaques" VerticalAlignment="Center" Margin="20 10 "/>
+                        </StackPanel>
+                    </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Magnify" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
@@ -101,10 +107,10 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <TabControl HorizontalAlignment="Left" Height="494" Margin="65,65,0,0" VerticalAlignment="Top" Width="973" BorderBrush="{x:Null}" Background="{x:Null}">
+        <TabControl HorizontalAlignment="Left" Height="494" Margin="200,65,0,0" VerticalAlignment="Top" Width="838" BorderBrush="{x:Null}" SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="TabItem">
-                <Grid>
-                   <!-- DESTAQUES -->
+                <Grid Margin="10,0,-27,-21">
+                    <DataGrid x:Name="DgUsuarios" HorizontalAlignment="Left" Height="451" Margin="10,10,0,0" VerticalAlignment="Top" Width="829" Background="{x:Null}"/>
                 </Grid>
             </TabItem>
             <TabItem Header="TabItem" Visibility="Visible">

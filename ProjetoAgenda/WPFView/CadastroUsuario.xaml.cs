@@ -59,5 +59,16 @@ namespace WPFView
 
             } 
         }
+
+        private void Limpar (object sender, RoutedEventArgs e)
+        {
+            string campo = nomeUsuario.Text;
+            //string comp = "Digite seu nome";
+
+            if (campo.Equals("Digite seu nome") )
+            {
+                nomeUsuario.Clear();
+            }
+        }
     }
 }

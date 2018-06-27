@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Controllers;
 
 namespace WPFView
 {
@@ -39,6 +40,12 @@ namespace WPFView
         {
             ButtonOpenMenu.Visibility = Visibility.Visible;
             ButtonCloseMenu.Visibility = Visibility.Collapsed;
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            UsuarioController usuario = new UsuarioController();
+            DgUsuarios.ItemsSource = usuario.ListarTodos();
         }
     }
 }
