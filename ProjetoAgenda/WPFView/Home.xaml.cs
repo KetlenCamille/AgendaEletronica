@@ -45,12 +45,12 @@ namespace WPFView
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UsuarioController usuario = new UsuarioController();
-            DgUsuarios.ItemsSource = usuario.ListarTodos();
+            xx.ItemsSource = usuario.ListarTodos();
         }
 
-        private void ListCategoria_GotMouseCapture(object sender, MouseEventArgs e)
+        private void ListCategoria(object sender, SelectionChangedEventArgs e)
         {
-            string categoria = "Banco";
+            string categoria = "Estacionamento";
             EstabelecimentoController estabelecimentoController = new EstabelecimentoController();
             dgEstabBanco.ItemsSource = estabelecimentoController.ListarPorCategoria(categoria);
         }

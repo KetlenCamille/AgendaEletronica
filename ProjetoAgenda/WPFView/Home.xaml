@@ -68,7 +68,7 @@
                             <TextBlock Text="Pesquisar" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60" GotMouseCapture="ListCategoria_GotMouseCapture">
+                    <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Bank" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock x:Name="Banco" Text="Banco" VerticalAlignment="Center" Margin="20 10 "/>
@@ -107,10 +107,10 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <TabControl HorizontalAlignment="Left" Height="494" Margin="200,65,0,0" VerticalAlignment="Top" Width="838" BorderBrush="{x:Null}" SelectionChanged="TabControl_SelectionChanged">
+        <TabControl HorizontalAlignment="Left" Height="494" Margin="200,65,0,0" VerticalAlignment="Top" Width="838" BorderBrush="{x:Null}" SelectionChanged="ListCategoria">
             <TabItem Header="TabItem">
                 <Grid Margin="10,0,-27,-21">
-                    <DataGrid x:Name="DgUsuarios" HorizontalAlignment="Left" Height="451" Margin="10,10,0,0" VerticalAlignment="Top" Width="829" Background="{x:Null}"/>
+                    <DataGrid x:Name="dgEstabBanco" HorizontalAlignment="Left" Height="451" Margin="10,10,0,0" VerticalAlignment="Top" Width="829" Background="{x:Null}"/>
                 </Grid>
             </TabItem>
             <TabItem Header="TabItem" Visibility="Visible">
@@ -124,9 +124,9 @@
                     <Button Content="Pesquisar" Grid.Column="1" HorizontalAlignment="Left" Margin="376,22,0,0" VerticalAlignment="Top" Width="95"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="dgEstabBanco" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812"/>
+            <TabItem Header="TabItem3">
+                <Grid Background="#FFE5E5E5" >
+                    <DataGrid x:Name="xx" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" />
                 </Grid>
             </TabItem>
             <Button Content="Pesquisar" Height="100" Width="75"/>
