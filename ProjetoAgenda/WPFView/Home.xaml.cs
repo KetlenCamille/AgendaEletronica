@@ -47,5 +47,12 @@ namespace WPFView
             UsuarioController usuario = new UsuarioController();
             DgUsuarios.ItemsSource = usuario.ListarTodos();
         }
+
+        private void ListCategoria_GotMouseCapture(object sender, MouseEventArgs e)
+        {
+            string categoria = "Banco";
+            EstabelecimentoController estabelecimentoController = new EstabelecimentoController();
+            dgEstabBanco.ItemsSource = estabelecimentoController.ListarPorCategoria(categoria);
+        }
     }
 }
