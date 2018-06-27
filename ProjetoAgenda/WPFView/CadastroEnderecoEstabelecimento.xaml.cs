@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,21 @@ namespace WPFView
         public CadastroEnderecoEstabelecimento()
         {
             InitializeComponent();
+        }
+
+        private void Cadastrar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                EnderecoEstabelecimento enderecoEstView = new EnderecoEstabelecimento();
+
+                enderecoEstView =
+                enderecoEstView =
+                enderecoEstView =
+                enderecoEstView =
+                enderecoEstView =
+                enderecoEstView =
+            }
         }
     }
 }

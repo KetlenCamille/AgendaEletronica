@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Controllers;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,45 @@ namespace WPFView
         public CadastroEstabelecimento()
         {
             InitializeComponent();
+        }
+
+        private void proximo(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                Estabelecimento estabelecimentoView = new Estabelecimento();
+
+                estabelecimentoView.nomeFantasia = nomeFantasia.Text;
+                estabelecimentoView.cnpjEstabelecimento = cnpj.Text;
+                estabelecimentoView.categoria = categoria.Text;
+                estabelecimentoView.telefoneEstabelecimento = telefone.Text;
+                estabelecimentoView.websiteEstabelecimento = website.Text;
+                estabelecimentoView.emailEstabelecimento = email.Text;
+                estabelecimentoView.senhaE = senha.Password;
+
+                EstabelecimentoController estController = new EstabelecimentoController();
+                int resp = estController.Cadastrar(estabelecimentoView);
+
+                if (resp == 1)
+                {
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                }
+                else if (resp == 0)
+                {
+                    MessageBox.Show("Houston, temos um problema!");
+                }
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ligue para o suporte: " + ex);
+
+            }
+
+            CadastroEnderecoEstabelecimento cadEndereco = new CadastroEnderecoEstabelecimento();
+            cadEndereco.Show();
         }
     }
 }
