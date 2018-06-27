@@ -45,14 +45,18 @@ namespace WPFView
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UsuarioController usuario = new UsuarioController();
-            xx.ItemsSource = usuario.ListarTodos();
+            dgEstabBanco.ItemsSource = usuario.ListarTodos();
         }
 
         private void ListCategoria(object sender, SelectionChangedEventArgs e)
         {
-            string categoria = "Estacionamento";
-            EstabelecimentoController estabelecimentoController = new EstabelecimentoController();
-            dgEstabBanco.ItemsSource = estabelecimentoController.ListarPorCategoria(categoria);
+            if(bancoItem.IsSelected)
+            {
+                string categoria = "Banco";
+                EstabelecimentoController estabelecimentoController = new EstabelecimentoController();
+                dgBanco.ItemsSource = estabelecimentoController.ListarPorCategoria(categoria);
+            }
+            
         }
     }
 }

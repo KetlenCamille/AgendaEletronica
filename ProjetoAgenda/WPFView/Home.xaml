@@ -113,7 +113,7 @@
                     <DataGrid x:Name="dgEstabBanco" HorizontalAlignment="Left" Height="451" Margin="10,10,0,0" VerticalAlignment="Top" Width="829" Background="{x:Null}"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem" Visibility="Visible">
+            <TabItem  Header="Pesquisar" Visibility="Visible">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="31*"/>
@@ -124,9 +124,9 @@
                     <Button Content="Pesquisar" Grid.Column="1" HorizontalAlignment="Left" Margin="376,22,0,0" VerticalAlignment="Top" Width="95"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem3">
+            <TabItem x:Name="bancoItem" Header="Banco">
                 <Grid Background="#FFE5E5E5" >
-                    <DataGrid x:Name="xx" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" />
+                    <DataGrid x:Name="dgBanco" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" />
                 </Grid>
             </TabItem>
             <Button Content="Pesquisar" Height="100" Width="75"/>
