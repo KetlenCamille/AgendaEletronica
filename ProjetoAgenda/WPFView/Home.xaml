@@ -68,7 +68,7 @@
                             <TextBlock Text="Pesquisar" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
+                    <ListViewItem Height="60" GotMouseCapture="ListCategoria_GotMouseCapture">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Bank" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock x:Name="Banco" Text="Banco" VerticalAlignment="Center" Margin="20 10 "/>
@@ -126,7 +126,7 @@
             </TabItem>
             <TabItem Header="TabItem">
                 <Grid Background="#FFE5E5E5">
-                    <Button Content="Button" HorizontalAlignment="Left" Margin="311,215,0,0" VerticalAlignment="Top" Width="75"/>
+                    <DataGrid x:Name="dgEstabBanco" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812"/>
                 </Grid>
             </TabItem>
             <Button Content="Pesquisar" Height="100" Width="75"/>
