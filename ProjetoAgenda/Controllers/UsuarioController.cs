@@ -63,5 +63,9 @@ namespace Controllers
             return false;
         }
 
+        public Usuario carregaUsuarioEmail(string email)
+        {
+            return contexto.Usuarios.Where(u => u.emailUsuario == email).FirstOrDefault();
+        }
     }
 }

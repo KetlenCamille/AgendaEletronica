@@ -89,5 +89,15 @@ namespace WPFView
                 telefone.Clear();
             }
         }
+
+        private void LimparEmail(object sender, MouseEventArgs e)
+        {
+            string campo = emailUsuario.Text;
+
+            if(campo.Equals("Digite seu e-mail"))
+            {
+                emailUsuario.Clear();
+            }
+        }
     }
 }

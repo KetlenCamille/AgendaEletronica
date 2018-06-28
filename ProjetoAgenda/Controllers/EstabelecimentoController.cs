@@ -73,5 +73,10 @@ namespace Controllers
             return false;
         }
 
+        public Estabelecimento carregaEstabelecimentoEmail(string email)
+        {
+            return contexto.Estabelecimentos.Where(e => e.emailEstabelecimento == email).FirstOrDefault();
+        }
+
     }
 }
