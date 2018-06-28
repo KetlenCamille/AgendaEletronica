@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Controllers;
+using Models;
 
 namespace WPFView
 {
@@ -23,6 +24,11 @@ namespace WPFView
         public Home()
         {
             InitializeComponent();
+
+            var usuario = Application.Current.Properties["_user"] as Usuario;
+
+            btn_alterarDados.Content = usuario.NomeUsuario;
+
         }
 
         private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)
@@ -61,7 +67,8 @@ namespace WPFView
 
         private void alterarDadosConta_Click(object sender, RoutedEventArgs e)
         {
-
+            configConta configConta = new configConta();
+            configConta.Show();
         }
     }
 }

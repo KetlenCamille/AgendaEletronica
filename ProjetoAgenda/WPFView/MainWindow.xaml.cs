@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Controllers;
+using Models;
 
 namespace WPFView
 {
@@ -41,8 +42,8 @@ namespace WPFView
 
         private void cadastraEstabelecimento_Click(object sender, RoutedEventArgs e)
         {
-            CadastroEstabelecimento cadastroEstacionamento = new CadastroEstabelecimento();
-            cadastroEstacionamento.Show();
+            CadastroEstabelecimento cadastroEstabelecimento = new CadastroEstabelecimento();
+            cadastroEstabelecimento.Show();
             
         }
 
@@ -58,7 +59,12 @@ namespace WPFView
                     UsuarioController usuController = new UsuarioController();
 
                     if (usuController.Autenticar(emailView, senhaView))
-                    {
+                    {                  
+                        Application.Current.Properties["_user"] = usuController.carregaUsuarioEmail(emailView);
+
+                        var usuario = Application.Current.Properties["_user"] as Usuario;
+                        emailView = usuario.NomeUsuario;
+
                         Home home = new Home();
                         home.Show();
                     }
@@ -74,6 +80,11 @@ namespace WPFView
 
                     if (estController.Autenticar(emailView, senhaView))
                     {
+                        Application.Current.Properties["_user"] = estController.carregaEstabelecimentoEmail(emailView);
+
+                        var estabelecimento = Application.Current.Properties["_user"] as Estabelecimento;
+                        emailView = estabelecimento.nomeFantasia;
+
                         Home home = new Home();
                         home.Show();
                     }
