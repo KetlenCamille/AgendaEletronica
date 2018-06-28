@@ -58,5 +58,10 @@ namespace WPFView
             }
             
         }
+
+        private void alterarDadosConta_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

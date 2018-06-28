@@ -37,8 +37,7 @@
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
                 <materialDesign:PopupBox Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Height="38" Width="50" Foreground="White">
                     <StackPanel Width="150">
-                        <Button Content="Account"/>
-                        <Button Content="Settings"/>
+                        <Button Content="Conta" Click="alterarDadosConta_Click"/>
                         <Separator/>
                         <Button x:Name="ButtonPopUpLogout" Content="Logout" Click="ButtonPopUpLogout_Click"/>
                     </StackPanel>
