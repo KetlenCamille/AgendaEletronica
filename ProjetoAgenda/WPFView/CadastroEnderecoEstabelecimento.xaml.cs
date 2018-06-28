@@ -28,6 +28,8 @@ namespace WPFView
 
         private void Cadastrar_Click(object sender, RoutedEventArgs e)
         {
+            CadastroEstabelecimento cadEstab = new CadastroEstabelecimento();
+            this.Close();
             try
             {
                 EnderecoEstabelecimento enderecoEstView = new EnderecoEstabelecimento();
@@ -51,6 +53,9 @@ namespace WPFView
                 }
 
                 this.Close();
+
+                CadastroEstabelecimento cadEst = new CadastroEstabelecimento();
+                cadEst.Show();
             }
             catch(Exception ex)
             {

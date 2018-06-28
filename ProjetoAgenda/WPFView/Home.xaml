@@ -57,67 +57,62 @@
                 <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF13688D">
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Star" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Star" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpDestaques"/>
                             <TextBlock Text="Destaques" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Magnify" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Magnify" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpPesquisar"/>
                             <TextBlock Text="Pesquisar" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Bank" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Bank" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpBanco"/>
                             <TextBlock x:Name="Banco" Text="Banco" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Car" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Car" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpEstacionamento"/>
                             <TextBlock x:Name="Estacionamento" Text="Estacionamento" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="MedicalBag" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="MedicalBag" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpFarmacia"/>
                             <TextBlock x:Name="Farmácia" Text="Farmácia" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Food" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Food" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpFastFood"/>
                             <TextBlock x:Name="Fastfood" Text="Fast-Food" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Hotel" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Hotel" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpHotel"/>
                             <TextBlock x:Name="Hotel" Text="Hotel" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Cat" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Cat" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpPetShop"/>
                             <TextBlock x:Name="PetShop" Text="Pet Shop" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>
             </StackPanel>
         </Grid>
-        <TabControl HorizontalAlignment="Left" Height="494" Margin="200,65,0,0" VerticalAlignment="Top" Width="838" BorderBrush="{x:Null}" SelectionChanged="ListCategoria">
-            <TabItem Header="TabItem">
+        <TabControl x:Name="menuTab" HorizontalAlignment="Left" Height="494" Margin="200,65,0,0" VerticalAlignment="Top" Width="838" BorderBrush="{x:Null}" SelectionChanged="ListCategoria">
+            <TabItem x:Name="destaquesItem" Header="TabItem">
                 <Grid Margin="10,0,-27,-21">
-                    <DataGrid x:Name="dgEstabBanco" HorizontalAlignment="Left" Height="451" Margin="10,10,0,0" VerticalAlignment="Top" Width="829" Background="{x:Null}"/>
                 </Grid>
             </TabItem>
-            <TabItem  Header="Pesquisar" Visibility="Visible">
+            <TabItem x:Name="pesquisarItem" Header="Pesquisar" Visibility="Visible">
                 <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="31*"/>
-                        <ColumnDefinition Width="936*"/>
-                    </Grid.ColumnDefinitions>
                     <Label Content="Faça sua busca:" Grid.Column="1" HorizontalAlignment="Left" Margin="94,26,0,0" VerticalAlignment="Top" Width="93"/>
                     <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="192,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
                     <Button Content="Pesquisar" Grid.Column="1" HorizontalAlignment="Left" Margin="376,22,0,0" VerticalAlignment="Top" Width="95"/>
@@ -126,6 +121,31 @@
             <TabItem x:Name="bancoItem" Header="Banco">
                 <Grid Background="#FFE5E5E5" >
                     <DataGrid x:Name="dgBanco" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" />
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="estacionamentoItem" Header="Estacionamento">
+                <Grid Background="#FFE5E5E5" >
+                    <DataGrid x:Name="dgEstacionamento" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" />
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="farmaciaItem" Header="Farmácia">
+                <Grid Background="#FFE5E5E5" >
+                    <DataGrid x:Name="dgFarmacia" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" />
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="fastfoodItem" Header="Fast-Food">
+                <Grid Background="#FFE5E5E5" >
+                    <DataGrid x:Name="dgFastfood" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" />
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="hotelItem" Header="Hotel">
+                <Grid Background="#FFE5E5E5" >
+                    <DataGrid x:Name="dgHotel" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" />
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="petshopItem" Header="Pet-Shop">
+                <Grid Background="#FFE5E5E5" >
+                    <DataGrid x:Name="dgPetshop" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" />
                 </Grid>
             </TabItem>
             <Button Content="Pesquisar" Height="100" Width="75"/>

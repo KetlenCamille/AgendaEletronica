@@ -23,12 +23,14 @@ namespace WPFView
     {
         public CadastroEstabelecimento()
         {
+            EnderecoEstabelecimentoController endestabContro = new EnderecoEstabelecimentoController();
+
             InitializeComponent();
+            enderecoEstab.ItemsSource = endestabContro.ListarTodos();
         }
 
         private void proximo_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 Estabelecimento estabelecimentoView = new Estabelecimento();
@@ -46,8 +48,7 @@ namespace WPFView
 
                 if (resp == 1)
                 {
-                    CadastroEnderecoEstabelecimento cadEndereco = new CadastroEnderecoEstabelecimento();
-                    cadEndereco.Show();
+                    MessageBox.Show("Cadastrado com Sucesso!");
                 }
                 else if (resp == 0)
                 {
@@ -61,6 +62,13 @@ namespace WPFView
                 MessageBox.Show("Ligue para o suporte: " + ex);
 
             } 
+        }
+
+        private void button_ClickEndereço(object sender, RoutedEventArgs e)
+        {
+            CadastroEnderecoEstabelecimento cadEndereco = new CadastroEnderecoEstabelecimento();
+            cadEndereco.Show();
+            this.Close();
         }
     }
 }
