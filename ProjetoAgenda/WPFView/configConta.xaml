@@ -5,9 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFView"
         mc:Ignorable="d"
-        Title="configConta" Height="450" Width="800">
-    <Grid>
-        <Label Content="Alterar Dados da Conta" HorizontalAlignment="Left" Margin="21,-1,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        Title="configConta" Height="450" Width="350">
+    <Grid Margin="0,0,2,0">
+        <Label Content="Alterar Dados da Conta" HorizontalAlignment="Left" Margin="21,14,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Nome: " HorizontalAlignment="Left" Margin="70,79,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nomeUsuario" HorizontalAlignment="Left" Height="26" Margin="124,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"  RenderTransformOrigin="0.533,1.261"/>
+        <Label Content="CPF:" HorizontalAlignment="Left" Margin="70,111,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="cpfUsuario" HorizontalAlignment="Left" Height="24" Margin="108,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" RenderTransformOrigin="0.533,1.261"/>
+        <Label Content="Data nasc.:" HorizontalAlignment="Left" Margin="70,141,0,0" VerticalAlignment="Top"/>
+        <Label Content="E-mail:" HorizontalAlignment="Left" Margin="76,249,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
+        <TextBox x:Name="emailUsuario" HorizontalAlignment="Left" Height="26" Margin="127,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" RenderTransformOrigin="0.533,1.261"/>
+        <Label Content="Dados p/ Login:" HorizontalAlignment="Left" Margin="38,221,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
+        <Label Content="Dados pessoais:" HorizontalAlignment="Left" Margin="38,53,0,0" VerticalAlignment="Top"/>
+        <Label Content="Senha:" HorizontalAlignment="Left" Margin="76,279,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
+        <PasswordBox x:Name="senhaUsuario" HorizontalAlignment="Left" Margin="126,281,0,0" VerticalAlignment="Top" Width="172"/>
+        <DatePicker x:Name="datanascUsuario" HorizontalAlignment="Left" Margin="142,146,0,0" VerticalAlignment="Top" Width="156" Height="21"/>
+        <Label Content="Telefone:" HorizontalAlignment="Left" Margin="70,173,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="telefone" HorizontalAlignment="Left" Height="26" Margin="132,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166"/>
 
     </Grid>
 </Window>

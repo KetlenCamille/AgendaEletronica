@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,22 @@ namespace WPFView
         public configConta()
         {
             InitializeComponent();
+            var usuario = Application.Current.Properties["_user"] as Usuario;
+
+            nomeUsuario.Text = usuario.NomeUsuario;
+            cpfUsuario.Text = usuario.cpfUsuario;
+            datanascUsuario.SelectedDate = usuario.dataNascimentoUsuario;
+            telefone.Text = usuario.telefoneUsuario;
+            emailUsuario.Text = usuario.emailUsuario;
+            senhaUsuario.Password = usuario.senhaUsuario;
+
+
         }
+
+        public void dadosUser(Usuario _user)
+        {
+            
+        }
+
     }
 }

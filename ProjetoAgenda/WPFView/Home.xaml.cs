@@ -63,7 +63,7 @@ namespace WPFView
                 dgBanco.ItemsSource = estabelecimentoController.ListarPorCategoria(categoria);
             }
             
-        }
+        } 
 
         private void alterarDadosConta_Click(object sender, RoutedEventArgs e)
         {
