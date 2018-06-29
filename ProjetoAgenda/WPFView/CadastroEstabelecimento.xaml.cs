@@ -34,7 +34,7 @@ namespace WPFView
             try
             {
                 Estabelecimento estabelecimentoView = new Estabelecimento();
-
+                estabelecimentoView.idEndereco = int.Parse(enderecoEstab.SelectedValue.ToString());
                 estabelecimentoView.nomeFantasia = nomeFantasia.Text;
                 estabelecimentoView.cnpjEstabelecimento = cnpj.Text;
                 estabelecimentoView.categoria = categoria.Text;

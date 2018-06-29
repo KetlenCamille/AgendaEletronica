@@ -12,7 +12,7 @@ namespace Models
         [Key]
         public int idEstabelecimento { get; set; }
 
-        public EnderecoEstabelecimento idEndereco { get; set; }
+        public int idEndereco { get; set; }
 
         [Required, StringLength(15)]
         public string cnpjEstabelecimento { get; set; }
