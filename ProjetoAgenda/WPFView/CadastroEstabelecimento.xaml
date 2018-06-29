@@ -36,8 +36,9 @@
         <Label Content="Dados do Login:" HorizontalAlignment="Left" Margin="10,232,0,0" VerticalAlignment="Top" BorderThickness="0" FontWeight="Bold" />
         <Button x:Name="button" Content="Cadastrar Endereço" HorizontalAlignment="Left" Margin="177,10,0,0" VerticalAlignment="Top" Width="162" Click="button_ClickEndereço"/>
 
-        <ComboBox x:Name="enderecoEstab" ItemsSource="{Binding logradouroEstabelecimento}" DisplayMemberPath="logradouroEstabelecimento"
-                    SelectedValuePath="idEndereco"  HorizontalAlignment="Left" Margin="145,415,0,0" VerticalAlignment="Top" Width="165" Background="#FFB2D1D0"/>
-        
+        <ComboBox x:Name="enderecoEstab" DisplayMemberPath="logradouroEstabelecimento" ItemsSource="{Binding logradouroEstabelecimento}"
+            SelectedValuePath="idEndereco"  HorizontalAlignment="Left" Margin="145,415,0,0" VerticalAlignment="Top" Width="165" Background="#FFB2D1D0">
+        </ComboBox>
+
     </Grid>
 </Window>

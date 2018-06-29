@@ -119,9 +119,13 @@
                     <DataGrid x:Name="dgPesquisar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Bottom" Height="400" Width="812"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="bancoItem" Header="Banco" Visibility="Collapsed">
+            <TabItem x:Name="bancoItem" Header="Banco"  Visibility="Collapsed">
                 <Grid Background="#FFE5E5E5" >
-                    <DataGrid x:Name="dgBanco" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" />
+                    <DataGrid x:Name="dgBanco" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nome Estabeçecimento" Binding="{Binding Path= nomeFantasia}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </Grid>
             </TabItem>
             <TabItem x:Name="estacionamentoItem" Header="Estacionamento" Visibility="Collapsed">
@@ -136,7 +140,17 @@
             </TabItem>
             <TabItem x:Name="fastfoodItem" Header="Fast-Food" Visibility="Collapsed">
                 <Grid Background="#FFE5E5E5" >
-                    <DataGrid x:Name="dgFastfood" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" />
+                    <DataGrid x:Name="dgFastfood"  AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Estabelecimento" Binding="{Binding Path= nomeFantasia}"/>
+                            <DataGridTextColumn Header="Logradouro" Binding="{Binding Path= logradouroEstabelecimento}"/>
+                            <DataGridTextColumn Header="Número" Binding="{Binding Path= logradouroEstabelecimento}"/>
+                            <DataGridTextColumn Header="Bairro" Binding="{Binding Path= logradouroEstabelecimento}"/>
+                            <DataGridTextColumn Header="Cidade" Binding="{Binding Path= logradouroEstabelecimento}"/>
+                            <DataGridTextColumn Header="Telefone" Binding="{Binding Path= telefone}"/>
+                            <DataGridTextColumn Header="Website" Binding="{Binding Path= website}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </Grid>
             </TabItem>
             <TabItem x:Name="hotelItem" Header="Hotel" Visibility="Collapsed">

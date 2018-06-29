@@ -50,6 +50,7 @@ namespace WPFView
 
         private void ListCategoria(object sender, SelectionChangedEventArgs e)
         {
+            EnderecoEstabelecimentoController endEstabController = new EnderecoEstabelecimentoController();
             EstabelecimentoController estabelecimentoController = new EstabelecimentoController();
             string categoria;
             if (bancoItem.IsSelected)
@@ -152,7 +153,6 @@ namespace WPFView
             EstabelecimentoController estabelecimentoController = new EstabelecimentoController();
             string pesquisa = stringPesquisa.Text;
             dgPesquisar.ItemsSource = estabelecimentoController.ListarPorPesquisa(pesquisa);
-
         }
     }
 }

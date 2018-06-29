@@ -51,5 +51,10 @@ namespace Controllers
             return contexto.EnderecoEstabelecimentos.ToList();
         }
 
+        public IList<EnderecoEstabelecimento> ListarPorId(int idEnderecoView)
+        {
+            return contexto.EnderecoEstabelecimentos.Where(a => a.idEndereco.Equals(idEnderecoView)).ToList();
+        }
+
     }
 }

@@ -82,6 +82,5 @@ namespace Controllers
         {
             return contexto.Estabelecimentos.Where(a => a.nomeFantasia.ToLower().Contains(pesquisa.ToLower())).ToList();
         }
-
     }
 }
