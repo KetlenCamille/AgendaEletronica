@@ -70,5 +70,56 @@ namespace WPFView
             cadEndereco.Show();
             this.Close();
         }
+
+        private void LimparNomeF(object sender, MouseEventArgs e)
+        {
+            string campo = nomeFantasia.Text;
+
+            if(campo.Equals("Digite o nome fantasia"))
+            {
+                nomeFantasia.Clear();
+            }
+        }
+
+        private void LimparCnpj(object sender, MouseEventArgs e)
+        {
+            string campo = cnpj.Text;
+
+            if (campo.Equals("Digite o CNPJ"))
+            {
+                cnpj.Clear();
+            }
+        }
+
+        private void LimparTel(object sender, MouseEventArgs e)
+        {
+            string campo = telefone.Text;
+
+            if (campo.Equals("(xx) xxxx-xxxx"))
+            {
+                telefone.Clear();
+            }
+        }
+
+        private void LimparWeb(object sender, MouseEventArgs e)
+        {
+            string campo = website.Text;
+
+            if(campo.Equals("Digite o website"))
+            {
+                website.Clear();
+            }
+        }
+
+        private void LimparEmail(object sender, MouseEventArgs e)
+        {
+            string campo = email.Text;
+
+            if (campo.Equals("Digite seu e-mail"))
+            {
+                email.Clear();
+            }
+        }
+
     }
 }

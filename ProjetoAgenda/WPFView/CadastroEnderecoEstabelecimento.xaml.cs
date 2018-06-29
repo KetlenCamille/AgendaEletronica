@@ -62,5 +62,56 @@ namespace WPFView
                 MessageBox.Show("Ligue para o suporte: " + ex);
             }
         }
+
+        private void LimparLogradouro(object sender, MouseEventArgs e)
+        {
+            string campo = logradouro.Text;
+
+            if (campo.Equals("Logradouro"))
+            {
+                logradouro.Clear();
+            }
+        }
+
+        private void LimparNumero(object sender, MouseEventArgs e)
+        {
+            string campo = numero.Text;
+
+            if (campo.Equals("Número"))
+            {
+                numero.Clear();
+            }
+        }
+
+        private void LimparBairro(object sender, MouseEventArgs e)
+        {
+            string campo = bairro.Text;
+
+            if (campo.Equals("Bairro"))
+            {
+                bairro.Clear();
+            }
+        }
+
+        private void LimparCidade(object sender, MouseEventArgs e)
+        {
+            string campo = cidade.Text;
+
+            if (campo.Equals("Cidade"))
+            {
+                cidade.Clear();
+            }
+        }
+
+        private void LimparProduto(object sender, MouseEventArgs e)
+        {
+            string campo = produto.Text;
+
+            if (campo.Equals("Produto"))
+            {
+                produto.Clear();
+            }
+        }
+
     }
 }
