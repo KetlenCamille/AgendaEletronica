@@ -27,7 +27,7 @@ namespace WPFView
 
             var usuario = Application.Current.Properties["_user"] as Usuario;
 
-            btn_alterarDados.Content = usuario.NomeUsuario;
+            //btn_alterarDados.Content = usuario.NomeUsuario;
 
         }
 
@@ -147,5 +147,12 @@ namespace WPFView
             petshopItem.IsSelected = true;
         }
 
+        private void ButtonPesquisar_Click(object sender, RoutedEventArgs e)
+        {
+            EstabelecimentoController estabelecimentoController = new EstabelecimentoController();
+            string pesquisa = stringPesquisa.Text;
+            dgPesquisar.ItemsSource = estabelecimentoController.ListarPorPesquisa(pesquisa);
+
+        }
     }
 }

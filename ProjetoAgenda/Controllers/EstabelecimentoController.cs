@@ -78,5 +78,10 @@ namespace Controllers
             return contexto.Estabelecimentos.Where(e => e.emailEstabelecimento == email).FirstOrDefault();
         }
 
+        public IList<Estabelecimento> ListarPorPesquisa(string pesquisa)
+        {
+            return contexto.Estabelecimentos.Where(a => a.nomeFantasia.ToLower().Contains(pesquisa.ToLower())).ToList();
+        }
+
     }
 }
