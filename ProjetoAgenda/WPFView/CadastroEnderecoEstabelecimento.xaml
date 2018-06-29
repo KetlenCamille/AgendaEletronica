@@ -9,21 +9,21 @@
     <Grid>
         <Label Content="Dados de Endereço:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Logradouro:" HorizontalAlignment="Left" Margin="44,54,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="logradouro" HorizontalAlignment="Left" Height="25" Margin="124,55,0,0" TextWrapping="Wrap" Text="Logradouro" VerticalAlignment="Top" Width="208"/>
+        <TextBox x:Name="logradouro" HorizontalAlignment="Left" Height="25" Margin="124,55,0,0" TextWrapping="Wrap" Text="Logradouro" VerticalAlignment="Top" Width="208" GotMouseCapture="LimparLogradouro"/>
         <Label Content="Número:" HorizontalAlignment="Left" Margin="44,96,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="numero" HorizontalAlignment="Left" Height="25" Margin="105,97,0,0" TextWrapping="Wrap" Text="Número" VerticalAlignment="Top" Width="227"/>
+        <TextBox x:Name="numero" HorizontalAlignment="Left" Height="25" Margin="105,97,0,0" TextWrapping="Wrap" Text="Número" VerticalAlignment="Top" Width="227" GotMouseCapture="LimparNumero"/>
         <Label Content="Bairro:" HorizontalAlignment="Left" Margin="44,141,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="bairro" HorizontalAlignment="Left" Height="25" Margin="93,142,0,0" TextWrapping="Wrap" Text="Bairro" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="bairro" HorizontalAlignment="Left" Height="25" Margin="93,142,0,0" TextWrapping="Wrap" Text="Bairro" VerticalAlignment="Top" Width="239" GotMouseCapture="LimparBairro"/>
         <Label Content="Cidade:" HorizontalAlignment="Left" Margin="44,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.895,0"/>
-        <TextBox x:Name="cidade" HorizontalAlignment="Left" Height="23" Margin="98,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="234" Text="Cidade"/>
+        <TextBox x:Name="cidade" HorizontalAlignment="Left" Height="23" Margin="98,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="234" Text="Cidade" GotMouseCapture="LimparCidade"/>
         <Label Content="UF: " HorizontalAlignment="Left" Margin="44,227,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="uf" HorizontalAlignment="Left" Margin="79,225,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox x:Name="uf" HorizontalAlignment="Left" Margin="79,225,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
             <ComboBoxItem Content="PR"/>
             <ComboBoxItem Content="SC"/>
             <ComboBoxItem Content="RS"/>
         </ComboBox>
         <Label Content="Produto:" HorizontalAlignment="Left" Margin="44,271,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="produto" HorizontalAlignment="Left" Height="23" Margin="104,271,0,0" TextWrapping="Wrap" Text="Produto" VerticalAlignment="Top" Width="228"/>
+        <TextBox x:Name="produto" HorizontalAlignment="Left" Height="23" Margin="104,271,0,0" TextWrapping="Wrap" Text="Produto" VerticalAlignment="Top" Width="228" GotMouseCapture="LimparProduto"/>
         <Button x:Name="Cadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="218,318,0,0" VerticalAlignment="Top" Width="101" Click="Cadastrar_Click"/>
 
     </Grid>

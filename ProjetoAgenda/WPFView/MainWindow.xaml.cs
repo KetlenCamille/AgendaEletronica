@@ -65,7 +65,8 @@ namespace WPFView
                         var usuario = Application.Current.Properties["_user"] as Usuario;
                         emailView = usuario.NomeUsuario;
 
-                        Home home = new Home();
+                        configConta configConta = new configConta();
+                        Home home = new Home(1);
                         home.Show();
                     }
                     else
@@ -85,7 +86,8 @@ namespace WPFView
                         var estabelecimento = Application.Current.Properties["_user"] as Estabelecimento;
                         emailView = estabelecimento.nomeFantasia;
 
-                        Home home = new Home();
+                        configEst configEst = new configEst();
+                        Home home = new Home(2);
                         home.Show();
                     }
                     else

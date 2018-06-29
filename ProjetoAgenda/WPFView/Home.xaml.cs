@@ -21,13 +21,25 @@ namespace WPFView
     /// </summary>
     public partial class Home : Window
     {
-        public Home()
+        public Home(int ident)
         {
             InitializeComponent();
 
-            var usuario = Application.Current.Properties["_user"] as Usuario;
+            if(ident == 1)
+            {
+                var usuario = Application.Current.Properties["_user"] as Usuario;
+                btn_alterarDadosEstabelecimento.Visibility = Visibility.Collapsed;
+                btn_alterarDadosUsuario.IsEnabled = true;
+                btn_alterarDadosUsuario.Content = usuario.NomeUsuario;
+            }
 
-            //btn_alterarDados.Content = usuario.NomeUsuario;
+            else if(ident == 2)
+            {
+                var est = Application.Current.Properties["_user"] as Estabelecimento;
+                btn_alterarDadosUsuario.Visibility = Visibility.Collapsed;
+                btn_alterarDadosEstabelecimento.IsEnabled = true;
+                btn_alterarDadosEstabelecimento.Content = est.nomeFantasia;
+            }
 
         }
 
@@ -86,10 +98,16 @@ namespace WPFView
 
         } 
 
-        private void alterarDadosConta_Click(object sender, RoutedEventArgs e)
+        private void alterarDadosUsuario_Click(object sender, RoutedEventArgs e)
         {
             configConta configConta = new configConta();
             configConta.Show();
+        }
+
+        private void alterarDadosEstabelecimento_Click(object sender, RoutedEventArgs e)
+        {
+            configEst configEst = new configEst();
+            configEst.Show();
         }
 
         private void PackIcon_MouseUpBanco(object sender, MouseButtonEventArgs e)

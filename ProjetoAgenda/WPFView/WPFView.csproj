@@ -84,7 +84,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="configConta.xaml">
+    <Page Include="configUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="configEstabelecimento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,8 +117,11 @@
     <Compile Include="CadastroUsuario.xaml.cs">
       <DependentUpon>CadastroUsuario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="configConta.xaml.cs">
-      <DependentUpon>configConta.xaml</DependentUpon>
+    <Compile Include="configUsuario.xaml.cs">
+      <DependentUpon>configUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="configEstabelecimento.xaml.cs">
+      <DependentUpon>configEstabelecimento.xaml</DependentUpon>
     </Compile>
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
