@@ -27,7 +27,7 @@ namespace Models
         [Required, StringLength(150)]
         public string emailUsuario { get; set; }
 
-        [Required, StringLength(15)]
+        [Required]
         public string senhaUsuario { get; set; }
     }
 }

@@ -24,7 +24,12 @@ namespace WPFView
         public configConta()
         {
             InitializeComponent();
-            var usuario = Application.Current.Properties["_user"] as Usuario;
+
+            UsuarioController usuC = new UsuarioController();
+
+            var usu = Application.Current.Properties["_user"] as Usuario;
+
+            var usuario = usuC.BuscarPorId(usu.IdUsuario);
 
             nomeUsuario.Text = usuario.NomeUsuario;
             cpfUsuario.Text = usuario.cpfUsuario;
@@ -39,6 +44,12 @@ namespace WPFView
 
         private void editar_Click(object sender, RoutedEventArgs e)
         {
+            UsuarioController usuC = new UsuarioController();
+
+            var usu = Application.Current.Properties["_user"] as Usuario;
+
+            var usuario = usuC.BuscarPorId(usu.IdUsuario);
+
             nomeUsuario.IsEnabled = true;
             cpfUsuario.IsEnabled = true;
             datanascUsuario.IsEnabled = true;
