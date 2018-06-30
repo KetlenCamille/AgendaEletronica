@@ -14,7 +14,7 @@ namespace Controllers.Base
 
         T BuscarPorId(int id);
 
-        void Editar(T entity);
+        int Editar(T entity);
 
         void Excluir(int id);
     }

@@ -29,10 +29,15 @@ namespace Controllers
             return 0;
         }
 
-        public void Editar(Usuario usuario)
+        public int Editar(Usuario usuario)
         {
-            contexto.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
-            contexto.SaveChanges();
+            if (usuario != null)
+            {
+                contexto.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
+                contexto.SaveChanges();
+                return 1;
+            }
+            return 0;
         }
 
         public void Excluir(int idUsuario)

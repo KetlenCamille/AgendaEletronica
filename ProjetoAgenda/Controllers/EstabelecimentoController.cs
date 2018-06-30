@@ -29,10 +29,14 @@ namespace Controllers
             return 0;
         }
 
-        public void Editar(Estabelecimento estabelecimento)
+        public int Editar(Estabelecimento estabelecimento)
         {
-            contexto.Entry(estabelecimento).State = System.Data.Entity.EntityState.Modified;
-            contexto.SaveChanges();
+            if(estabelecimento != null)
+            {
+                contexto.Entry(estabelecimento).State = System.Data.Entity.EntityState.Modified;
+                contexto.SaveChanges();
+            }
+            return 0;
         }
 
         public void Excluir(int idEstabelecimento)

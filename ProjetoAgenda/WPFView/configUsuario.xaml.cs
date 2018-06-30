@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Controllers;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,13 +33,55 @@ namespace WPFView
             emailUsuario.Text = usuario.emailUsuario;
             senhaUsuario.Password = usuario.senhaUsuario;
 
+            btn_salvar.Visibility = Visibility.Collapsed;
 
         }
 
-        public void dadosUser(Usuario _user)
+        private void editar_Click(object sender, RoutedEventArgs e)
         {
-            
+            nomeUsuario.IsEnabled = true;
+            cpfUsuario.IsEnabled = true;
+            datanascUsuario.IsEnabled = true;
+            telefone.IsEnabled = true;
+            emailUsuario.IsEnabled = true;
+            senhaUsuario.IsEnabled = true;
+
+            btn_editar.Visibility = Visibility.Collapsed;
+            btn_salvar.Visibility = Visibility.Visible;
         }
 
+        private void salvar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Usuario usuarioView = new Usuario();
+
+                usuarioView.NomeUsuario = nomeUsuario.Text;
+                usuarioView.cpfUsuario = cpfUsuario.Text;
+                usuarioView.dataNascimentoUsuario = datanascUsuario.SelectedDate.Value;
+                usuarioView.telefoneUsuario = telefone.Text;
+                usuarioView.emailUsuario = emailUsuario.Text;
+                usuarioView.senhaUsuario = senhaUsuario.Password;
+
+                UsuarioController usuContr = new UsuarioController();
+                int resp = usuContr.Editar(usuarioView);
+
+                if (resp == 1)
+                {
+                    MessageBox.Show("Dados alterados com sucesso!");
+                }
+                else if (resp == 0)
+                {
+                    MessageBox.Show("Houston, temos um problema!");
+                }
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ligue para o suporte: " + ex);
+
+            }
+        }
     }
 }

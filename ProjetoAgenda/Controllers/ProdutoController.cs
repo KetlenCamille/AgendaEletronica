@@ -29,10 +29,15 @@ namespace Controllers
             return 0;
         }
     
-        public void Editar(Produto produto)
+        public int Editar(Produto produto)
         {
-            contexto.Entry(produto).State = System.Data.Entity.EntityState.Modified;
-            contexto.SaveChanges();
+            if(produto != null)
+            {
+                contexto.Entry(produto).State = System.Data.Entity.EntityState.Modified;
+                contexto.SaveChanges();
+                return 1;
+            }
+            return 0;
         }
 
         public void Excluir(int idProduto)
