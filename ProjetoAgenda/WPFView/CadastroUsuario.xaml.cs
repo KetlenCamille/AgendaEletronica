@@ -21,6 +21,7 @@ namespace WPFView
     /// </summary>
     public partial class CadastroUsuario : Window
     {
+        static string erro;
         public CadastroUsuario()
         {
             InitializeComponent();
@@ -39,25 +40,32 @@ namespace WPFView
                 usuarioView.emailUsuario = emailUsuario.Text;
                 usuarioView.senhaUsuario = senhaUsuario.Password;
 
-                UsuarioController usuContr = new UsuarioController();
-                int resp = usuContr.Cadastrar(usuarioView);
-
-                if (resp == 1)
+                if(validacoes(usuarioView))
                 {
-                    MessageBox.Show("Cadastrado com Sucesso!");
-                }
-                else if (resp == 0)
-                {
-                    MessageBox.Show("Houston, temos um problema!");
-                }
+                    UsuarioController usuContr = new UsuarioController();
+                    int resp = usuContr.Cadastrar(usuarioView);
 
-                this.Close();
+                    if (resp == 1)
+                    {
+                        MessageBox.Show("Cadastrado com Sucesso!");
+                    }
+                    else if (resp == 0)
+                    {
+                        MessageBox.Show("Houston, temos um problema!");
+                    }
+
+                    this.Close();
+                }
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Não pode ter campos nulos");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ligue para o suporte: " + ex);
-
-            } 
+            }
+           
         }
 
         private void LimparNome (object sender, RoutedEventArgs e)
@@ -99,5 +107,110 @@ namespace WPFView
                 emailUsuario.Clear();
             }
         }
+
+        private bool validacoes(Usuario usuario)
+        {
+            if(usuario.NomeUsuario == "" || usuario.dataNascimentoUsuario == null || usuario.telefoneUsuario == "" || usuario.emailUsuario == ""|| usuario.senhaUsuario == "")
+            {
+                erro = "Não pode conter campos em branco.";
+            }
+            else if(usuario.NomeUsuario.Length < 5)
+            {
+                erro = " Quantidade de caracteres inválida no Nome.";
+            }
+            /*else if(usuario.telefoneUsuario.Length != 10 || usuario.telefoneUsuario.Length != 11)
+            {
+                erro = " Telefone inválido."; 
+            }*/
+            else if(!usuario.emailUsuario.Contains('@'))
+            {
+                erro = " E-mail inválido.";
+            }
+            else if(usuario.senhaUsuario.Length < 8)
+            {
+                erro = " Senha deve conter no mínimo 8 caracteres.";
+            }
+            else if(usuario.cpfUsuario.Length != 11 || !validaCpf(usuario.cpfUsuario))
+            {
+                erro = " CPF inválido.";
+            }
+
+            if(erro == null)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show(erro);
+                return false;
+            }
+        }
+
+        private bool validaCpf(string cpfView)
+        {
+            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2, };
+            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+
+            string cpf = cpfView;
+            string auxCpf;
+            string digito;
+            int soma;
+            int resto;
+
+            cpf = cpf.Trim(); // Remoção de espaços
+            cpf = cpf.Replace(".", "").Replace("-", ""); //Remoção de . e -
+
+            auxCpf = cpf.Substring(0, 9); //Pega os primeiros 9 numeros digitados
+            soma = 0;
+
+            for (int i = 0; i < 9; i++)
+            {
+                //Multiplicando e somando com o vetor
+                soma += int.Parse(auxCpf[i].ToString()) * multiplicador1[i];
+            }
+
+            resto = soma % 11; //Calculando resto da divisão
+
+            if(resto < 2)
+            {
+                resto = 0;
+            }
+            else
+            {
+                resto = 11 - resto;
+            }
+
+            digito = resto.ToString(); //Guarda o primeiro digito
+            auxCpf = auxCpf + digito; //Passa o valor para a string auxiliar
+
+            soma = 0;
+
+            for (int i = 0; i < 10; i++) //Possui mais um digito
+            {
+                //Multiplica e soma o valor no segundo vetor
+                soma += int.Parse(auxCpf[i].ToString()) * multiplicador2[i];
+            }
+
+            resto = soma % 11; //Calculando o reto da divisao
+            if(resto < 2)
+            {
+                resto = 0;
+            }
+            else
+            {
+                resto = 11 - resto;
+            }
+
+            auxCpf = auxCpf + resto; //Passa o último digito
+
+            if(cpf == auxCpf)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
-}
+;}

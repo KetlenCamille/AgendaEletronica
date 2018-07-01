@@ -58,49 +58,49 @@
                 <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF13688D">
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Star" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpDestaques"/>
+                            <materialDesign:PackIcon Kind="Star" Width="25" Height="25" Margin="10" VerticalAlignment="Center"  MouseDoubleClick="PackIcon_MouseUpDestaques"/>
                             <TextBlock Text="Destaques" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Magnify" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpPesquisar"/>
+                            <materialDesign:PackIcon Kind="Magnify" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseDoubleClick="PackIcon_MouseUpPesquisar"/>
                             <TextBlock Text="Pesquisar" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Bank" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpBanco"/>
+                            <materialDesign:PackIcon Kind="Bank" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseDoubleClick="PackIcon_MouseUpBanco"/>
                             <TextBlock x:Name="Banco" Text="Banco" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Car" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpEstacionamento"/>
+                            <materialDesign:PackIcon Kind="Car" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseDoubleClick="PackIcon_MouseUpEstacionamento"/>
                             <TextBlock x:Name="Estacionamento" Text="Estacionamento" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="MedicalBag" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpFarmacia"/>
+                            <materialDesign:PackIcon Kind="MedicalBag" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseDoubleClick="PackIcon_MouseUpFarmacia"/>
                             <TextBlock x:Name="Farmácia" Text="Farmácia" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Food" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpFastFood"/>
+                            <materialDesign:PackIcon Kind="Food" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseDoubleClick="PackIcon_MouseUpFastFood"/>
                             <TextBlock x:Name="Fastfood" Text="Fast-Food" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Hotel" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpHotel"/>
+                            <materialDesign:PackIcon Kind="Hotel" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseDoubleClick="PackIcon_MouseUpHotel"/>
                             <TextBlock x:Name="Hotel" Text="Hotel" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Cat" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseUp="PackIcon_MouseUpPetShop"/>
+                            <materialDesign:PackIcon Kind="Cat" Width="25" Height="25" Margin="10" VerticalAlignment="Center" MouseDoubleClick="PackIcon_MouseUpPetShop"/>
                             <TextBlock x:Name="PetShop" Text="Pet Shop" VerticalAlignment="Center" Margin="20 10 "/>
                         </StackPanel>
                     </ListViewItem>
