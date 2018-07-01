@@ -100,8 +100,8 @@ namespace WPFView
 
         private void alterarDadosUsuario_Click(object sender, RoutedEventArgs e)
         {
-            configConta configConta = new configConta();
-            configConta.Show();
+            AlterarUsuario altUsu = new AlterarUsuario();
+            altUsu.Show();
         }
 
         private void alterarDadosEstabelecimento_Click(object sender, RoutedEventArgs e)

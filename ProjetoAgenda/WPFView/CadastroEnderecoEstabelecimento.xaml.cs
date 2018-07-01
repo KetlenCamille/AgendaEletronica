@@ -55,6 +55,7 @@ namespace WPFView
                 this.Close();
 
                 CadastroEstabelecimento cadEst = new CadastroEstabelecimento();
+                cadEst.cadastrarEstab_btn.Visibility = Visibility.Visible;
                 cadEst.Show();
             }
             catch(Exception ex)

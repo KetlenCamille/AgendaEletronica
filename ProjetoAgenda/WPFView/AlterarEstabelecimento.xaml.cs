@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WPFView
 {
     /// <summary>
-    /// Interaction logic for configEst.xaml
+    /// Lógica interna para AlterarEstabelecimento.xaml
     /// </summary>
-    public partial class configEst : Window
+    public partial class AlterarEstabelecimento : Window
     {
-        public configEst()
+        public AlterarEstabelecimento()
         {
             InitializeComponent();
         }

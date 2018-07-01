@@ -1,6 +1,4 @@
-﻿using Controllers;
-using Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,18 +11,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Controllers;
+using Models;
 
 namespace WPFView
 {
     /// <summary>
-    /// Interaction logic for configConta.xaml
+    /// Lógica interna para AlterarUsuario.xaml
     /// </summary>
-    public partial class configConta : Window
+    public partial class AlterarUsuario : Window
     {
-        public configConta()
+        public AlterarUsuario()
         {
             InitializeComponent();
-
             UsuarioController usuC = new UsuarioController();
 
             var usu = Application.Current.Properties["_user"] as Usuario;
@@ -39,7 +38,6 @@ namespace WPFView
             senhaUsuario.Password = usuario.senhaUsuario;
 
             btn_salvar.Visibility = Visibility.Collapsed;
-
         }
 
         private void editar_Click(object sender, RoutedEventArgs e)
@@ -96,3 +94,4 @@ namespace WPFView
         }
     }
 }
+

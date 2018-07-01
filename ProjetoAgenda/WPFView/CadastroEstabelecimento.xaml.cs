@@ -27,9 +27,10 @@ namespace WPFView
 
             InitializeComponent();
             enderecoEstab.ItemsSource = endestabContro.ListarTodos();
+            cadastrarEstab_btn.Visibility = Visibility.Collapsed;
         }
 
-        private void proximo_Click(object sender, RoutedEventArgs e)
+        private void cadastrarEstab_Click(object sender, RoutedEventArgs e)
         {
             try
             {

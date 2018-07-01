@@ -28,11 +28,6 @@ namespace WPFView
             InitializeComponent();
         }
 
-        private void Listar_Click(object sender, RoutedEventArgs e)
-        {
-            Listar list = new Listar();
-            list.Show();
-      }
 
         private void cadastraUsuario(object sender, RoutedEventArgs e)
         {
@@ -65,7 +60,7 @@ namespace WPFView
                         var usuario = Application.Current.Properties["_user"] as Usuario;
                         emailView = usuario.NomeUsuario;
 
-                        configConta configConta = new configConta();
+                        AlterarUsuario altUsu = new AlterarUsuario();
                         Home home = new Home(1);
                         home.Show();
                     }
