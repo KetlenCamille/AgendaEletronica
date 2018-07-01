@@ -21,6 +21,7 @@ namespace WPFView
     /// </summary>
     public partial class CadastroEstabelecimento : Window
     {
+        static string erro;
         public CadastroEstabelecimento()
         {
             EnderecoEstabelecimentoController endestabContro = new EnderecoEstabelecimentoController();
@@ -45,18 +46,21 @@ namespace WPFView
                 estabelecimentoView.senhaE = senha.Password;
 
                 EstabelecimentoController estacionamentoController = new EstabelecimentoController();
-                int resp = estacionamentoController.Cadastrar(estabelecimentoView);
-
-                if (resp == 1)
+                if(validar(estabelecimentoView))
                 {
-                    MessageBox.Show("Cadastrado com Sucesso!");
-                }
-                else if (resp == 0)
-                {
-                    MessageBox.Show("Houston, temos um problema!");
-                }
+                    int resp = estacionamentoController.Cadastrar(estabelecimentoView);
 
-                this.Close();
+                    if (resp == 1)
+                    {
+                        MessageBox.Show("Cadastrado com Sucesso!");
+                    }
+                    else if (resp == 0)
+                    {
+                        MessageBox.Show("Houston, temos um problema!");
+                    }
+
+                    this.Close();
+                }  
             }
             catch (Exception ex)
             {
@@ -119,6 +123,101 @@ namespace WPFView
             if (campo.Equals("Digite seu e-mail"))
             {
                 email.Clear();
+            }
+        }
+
+        private bool validar(Estabelecimento estab)
+        {
+            if(estab.nomeFantasia.Length < 5)
+            {
+                erro = "Quantidade de caracteres inválida no nome.";
+            }
+            else if(estab.cnpjEstabelecimento.Length != 14 && !validaCnpj(estab.cnpjEstabelecimento))
+            {
+                erro = "CNJPJ inválido.";
+            }
+            else if(estab.telefoneEstabelecimento.Length != 10 && estab.telefoneEstabelecimento.Length != 11)
+            {
+                erro = " Telefone inválido";
+            }
+            else if(!estab.websiteEstabelecimento.Contains(".com"))
+            {
+                erro = " WebSite inválido.";
+            }
+            else if (!estab.emailEstabelecimento.Contains('@'))
+            {
+                erro = " E-mail inválido.";
+            }
+            else if(estab.senhaE.Length < 8)
+            {
+                erro = " Senha deve conter no mínimo 8 caracteres.";
+            }
+
+            EstabelecimentoController estabController = new EstabelecimentoController();
+            
+
+            foreach (Estabelecimento estabelecimento in estabController.ListarTodos())
+            {
+               if(estabelecimento.emailEstabelecimento == estab.emailEstabelecimento)
+                {
+                    erro = " E-mail já existente.";
+                }
+            }
+
+            if(erro == null)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show(erro);
+                return false;
+            }
+        }
+
+        private bool validaCnpj(string cnpjView)
+        {
+            int[] multiplicador1 = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = new int[13] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+
+            string cnpj = cnpjView;
+            cnpj = cnpj.Trim().Replace(".", "").Replace("-", "");
+            if (cnpj.Length != 14)
+                return false;
+
+            string tempCnpj = cnpj.Substring(0, 12);
+            int soma = 0;
+
+            for (int i = 0; i < 12; i++)
+                soma += int.Parse(tempCnpj[i].ToString()) * multiplicador1[i];
+
+            int resto = (soma % 11);
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+
+            string digito = resto.ToString();
+            tempCnpj = tempCnpj + digito;
+            soma = 0;
+            for (int i = 0; i < 13; i++)
+                soma += int.Parse(tempCnpj[i].ToString()) * multiplicador2[i];
+
+            resto = (soma % 11);
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+
+            digito = digito + resto.ToString();
+
+            if(digito == cnpjView)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
