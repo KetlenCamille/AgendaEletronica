@@ -107,7 +107,7 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <TabControl x:Name="menuTab" HorizontalAlignment="Left" Height="494" Margin="200,65,0,0" VerticalAlignment="Top" Width="838" BorderBrush="{x:Null}" SelectionChanged="ListCategoria">
+        <TabControl x:Name="menuTab" HorizontalAlignment="Left" Height="494" Margin="200,65,0,0" VerticalAlignment="Top" Width="838" BorderBrush="{x:Null}" SelectionChanged="ListCategoria" Background="LightGray">
             <TabItem x:Name="destaquesItem" Header="Destaques" Visibility="Collapsed">
                 <Grid Margin="10,0,-27,-21">
                 </Grid>
@@ -117,7 +117,7 @@
                     <Label Content="Faça sua busca:" Grid.Column="1" HorizontalAlignment="Left" Margin="94,26,0,0" VerticalAlignment="Top" Width="93"/>
                     <TextBox x:Name="stringPesquisa" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="192,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
                     <Button Content="Pesquisar" Grid.Column="1" HorizontalAlignment="Left" Margin="376,22,0,0" VerticalAlignment="Top" Width="95" Click="ButtonPesquisar_Click"/>
-                    <DataGrid x:Name="dgPesquisar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Bottom" Height="400" Width="812"/>
+                    <DataGrid x:Name="dgPesquisar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Bottom" Height="400" Width="812" Background="LightGray"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="bancoItem" Header="Banco"  Visibility="Collapsed">

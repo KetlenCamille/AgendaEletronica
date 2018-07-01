@@ -106,8 +106,8 @@ namespace WPFView
 
         private void alterarDadosEstabelecimento_Click(object sender, RoutedEventArgs e)
         {
-            configEst configEst = new configEst();
-            configEst.Show();
+            AlterarEstabelecimento altEst = new AlterarEstabelecimento();
+            altEst.Show();
         }
 
         private void PackIcon_MouseUpBanco(object sender, MouseButtonEventArgs e)

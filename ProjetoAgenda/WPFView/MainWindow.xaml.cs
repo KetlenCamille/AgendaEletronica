@@ -81,7 +81,7 @@ namespace WPFView
                         var estabelecimento = Application.Current.Properties["_user"] as Estabelecimento;
                         emailView = estabelecimento.nomeFantasia;
 
-                        configEst configEst = new configEst();
+                        AlterarEstabelecimento altEst = new AlterarEstabelecimento();
                         Home home = new Home(2);
                         home.Show();
                     }
