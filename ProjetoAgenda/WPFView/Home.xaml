@@ -122,7 +122,7 @@
             </TabItem>
             <TabItem x:Name="bancoItem" Header="Banco"  Visibility="Collapsed">
                 <Grid Background="#FFE5E5E5" >
-                    <DataGrid x:Name="dgBanco" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" >
+                    <DataGrid x:Name="dgBanco" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" SelectionChanged="SelectionChanged_detalhes">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Nome Estabeçecimento" Binding="{Binding Path= nomeFantasia}"/>
                         </DataGrid.Columns>
@@ -141,15 +141,11 @@
             </TabItem>
             <TabItem x:Name="fastfoodItem" Header="Fast-Food" Visibility="Collapsed">
                 <Grid Background="#FFE5E5E5" >
-                    <DataGrid x:Name="dgFastfood"  AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812">
+                    <DataGrid x:Name="dgFastfood"  AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" SelectionChanged="SelectionChanged_detalhes">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Estabelecimento" Binding="{Binding Path= nomeFantasia}"/>
-                            <DataGridTextColumn Header="Logradouro" Binding="{Binding Path= logradouroEstabelecimento}"/>
-                            <DataGridTextColumn Header="Número" Binding="{Binding Path= logradouroEstabelecimento}"/>
-                            <DataGridTextColumn Header="Bairro" Binding="{Binding Path= logradouroEstabelecimento}"/>
-                            <DataGridTextColumn Header="Cidade" Binding="{Binding Path= logradouroEstabelecimento}"/>
-                            <DataGridTextColumn Header="Telefone" Binding="{Binding Path= telefone}"/>
-                            <DataGridTextColumn Header="Website" Binding="{Binding Path= website}"/>
+                            <DataGridTextColumn Header="Estabelecimento" Binding="{Binding Path= nomeFantasia}" Width="300"/>
+                            <DataGridTextColumn Header="Telefone" Binding="{Binding Path= telefoneEstabelecimento}" Width="200"/>
+                            <DataGridTextColumn Header="Website" Binding="{Binding Path= websiteEstabelecimento}" Width="300"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>

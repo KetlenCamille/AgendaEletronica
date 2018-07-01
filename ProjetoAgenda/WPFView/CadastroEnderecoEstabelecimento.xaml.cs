@@ -34,7 +34,11 @@ namespace WPFView
             {
                 EnderecoEstabelecimento enderecoEstView = new EnderecoEstabelecimento();
 
-                enderecoEstView.logradouroEstabelecimento = logradouro.Text;
+                string log = logradouro.Text;
+                string num = numero.Text;
+                //Gambiarra pra fazer aparecer logradouro no combobox
+                string juncao = log + ' ' +  num;
+                enderecoEstView.logradouroEstabelecimento = juncao;
                 enderecoEstView.numero = numero.Text;
                 enderecoEstView.bairro = bairro.Text;
                 enderecoEstView.cidade = cidade.Text;

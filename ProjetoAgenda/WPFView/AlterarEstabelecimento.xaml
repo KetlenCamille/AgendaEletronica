@@ -9,9 +9,9 @@
     <Grid>
         <Label Content="Dados do Estabelecimento:" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" BorderThickness="0" FontWeight="Bold" />
         <Label Content="CNPJ:" HorizontalAlignment="Left" Margin="52,168,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="cnpj" HorizontalAlignment="Left" Height="25" Margin="114,167,0,0" TextWrapping="Wrap" Text="Digite o CNPJ" VerticalAlignment="Top" Width="196" GotMouseCapture="LimparCnpj"/>
+        <TextBox x:Name="cnpj" HorizontalAlignment="Left" Height="25" Margin="114,167,0,0" TextWrapping="Wrap" Text="Digite o CNPJ" VerticalAlignment="Top" Width="196" />
         <Label Content="Nome Fantasia:" HorizontalAlignment="Left" Margin="16,132,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.114,0.526"/>
-        <TextBox x:Name="nomeFantasia" Height="25" Margin="114,129,0,0" TextWrapping="Wrap" Text="Digite o nome fantasia" VerticalAlignment="Top" GotMouseCapture="LimparNomeF" HorizontalAlignment="Left" Width="191"/>
+        <TextBox x:Name="nomeFantasia" Height="25" Margin="114,129,0,0" TextWrapping="Wrap" Text="Digite o nome fantasia" VerticalAlignment="Top" HorizontalAlignment="Left" Width="191"/>
         <Label Content="Categoria:" HorizontalAlignment="Left" Margin="41,208,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="categoria"  HorizontalAlignment="Left" Margin="114,204,0,0" VerticalAlignment="Top" Width="196" SelectedIndex="0">
             <ComboBoxItem Content="Banco"/>
@@ -25,16 +25,16 @@
             <ComboBoxItem Content="Vestuário"/>
         </ComboBox>
         <Label Content="Telefone:" HorizontalAlignment="Left" Margin="43,246,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="telefone" HorizontalAlignment="Left" Height="25" Margin="114,245,0,0" TextWrapping="Wrap" Text="(xx) xxxx-xxxx" VerticalAlignment="Top" Width="196" GotMouseCapture="LimparTel"/>
+        <TextBox x:Name="telefone" HorizontalAlignment="Left" Height="25" Margin="114,245,0,0" TextWrapping="Wrap" Text="(xx) xxxx-xxxx" VerticalAlignment="Top" Width="196" />
         <Label Content="Website:" HorizontalAlignment="Left" Margin="46,287,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="website" HorizontalAlignment="Left" Height="25" Margin="114,284,0,0" TextWrapping="Wrap" Text="Digite o website" VerticalAlignment="Top" Width="196" GotMouseCapture="LimparWeb"/>
+        <TextBox x:Name="website" HorizontalAlignment="Left" Height="25" Margin="114,284,0,0" TextWrapping="Wrap" Text="Digite o website" VerticalAlignment="Top" Width="196" />
         <Label Content="Senha:" HorizontalAlignment="Left" Margin="50,442,0,0" VerticalAlignment="Top"/>
         <Button x:Name="alterarEstab_btn" Content="Alterar" HorizontalAlignment="Left" Margin="154,486,0,0" VerticalAlignment="Top" Width="113" Height="29"/>
         <PasswordBox x:Name="senha" HorizontalAlignment="Left" Margin="114,439,0,0" VerticalAlignment="Top" Width="196"/>
         <Label Content="E-mail:" HorizontalAlignment="Left" Margin="49,406,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="email" Text="Digite seu e-mail" HorizontalAlignment="Left" Height="25" Margin="114,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" GotMouseCapture="LimparEmail"/>
+        <TextBox x:Name="email" Text="Digite seu e-mail" HorizontalAlignment="Left" Height="25" Margin="114,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" />
         <Label Content="Dados do Login:" HorizontalAlignment="Left" Margin="10,376,0,0" VerticalAlignment="Top" BorderThickness="0" FontWeight="Bold" />
-        <Button x:Name="alterarEnderecoEstab" Content="Alterar Endereço" HorizontalAlignment="Left" Margin="114,44,0,0" VerticalAlignment="Top" Width="196" Click="buttonAlterarEnd_Click"/>
+        <Button x:Name="alterarEnderecoEstab" Content="Alterar Endereço" HorizontalAlignment="Left" Margin="114,44,0,0" VerticalAlignment="Top" Width="196"/>
 
         <ComboBox x:Name="enderecoEstab" DisplayMemberPath="logradouroEstabelecimento" ItemsSource="{Binding logradouroEstabelecimento}"
             SelectedValuePath="idEndereco"  HorizontalAlignment="Left" Margin="114,327,0,0" VerticalAlignment="Top" Width="191">

@@ -25,7 +25,7 @@ namespace WPFView
         {
             InitializeComponent();
 
-            if(ident == 1)
+            if (ident == 1)
             {
                 var usuario = Application.Current.Properties["_user"] as Usuario;
                 btn_alterarDadosEstabelecimento.Visibility = Visibility.Collapsed;
@@ -33,7 +33,7 @@ namespace WPFView
                 btn_alterarDadosUsuario.Content = usuario.NomeUsuario;
             }
 
-            else if(ident == 2)
+            else if (ident == 2)
             {
                 var est = Application.Current.Properties["_user"] as Estabelecimento;
                 btn_alterarDadosUsuario.Visibility = Visibility.Collapsed;
@@ -96,7 +96,7 @@ namespace WPFView
                 dgPetshop.ItemsSource = estabelecimentoController.ListarPorCategoria(categoria);
             }
 
-        } 
+        }
 
         private void alterarDadosUsuario_Click(object sender, RoutedEventArgs e)
         {
@@ -171,6 +171,26 @@ namespace WPFView
             EstabelecimentoController estabelecimentoController = new EstabelecimentoController();
             string pesquisa = stringPesquisa.Text;
             dgPesquisar.ItemsSource = estabelecimentoController.ListarPorPesquisa(pesquisa);
+        }
+
+        private void SelectionChanged_detalhes(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                DataGrid dg = ((DataGrid)sender);
+                Estabelecimento endEstabelecimento = (Estabelecimento)dg.Items[dg.SelectedIndex];
+                
+                if (endEstabelecimento.idEndereco > 0)
+                {
+                    DetalhesEstabelecimento detalhes = new DetalhesEstabelecimento(endEstabelecimento);
+                    detalhes.Show();
+                }
+            MessageBox.Show(dgFastfood.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ligue para o suporte: " + ex);
+            }
         }
     }
 }
