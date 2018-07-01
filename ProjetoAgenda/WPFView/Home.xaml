@@ -107,17 +107,17 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <TabControl x:Name="menuTab" HorizontalAlignment="Left" Height="494" Margin="200,65,0,0" VerticalAlignment="Top" Width="838" BorderBrush="{x:Null}" SelectionChanged="ListCategoria" Background="LightGray">
+        <TabControl x:Name="menuTab" HorizontalAlignment="Left" Height="510" Margin="200,65,0,0" VerticalAlignment="Top" Width="862" BorderBrush="{x:Null}" SelectionChanged="ListCategoria" Background="LightGray">
             <TabItem x:Name="destaquesItem" Header="Destaques" Visibility="Collapsed">
                 <Grid Margin="10,0,-27,-21">
                 </Grid>
             </TabItem>
-            <TabItem x:Name="pesquisarItem" Header="Pesquisar" Visibility="Collapsed">
+            <TabItem x:Name="pesquisarItem"  Header="Pesquisar" Visibility="Collapsed">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Faça sua busca:" Grid.Column="1" HorizontalAlignment="Left" Margin="94,26,0,0" VerticalAlignment="Top" Width="93"/>
                     <TextBox x:Name="stringPesquisa" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="192,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
                     <Button Content="Pesquisar" Grid.Column="1" HorizontalAlignment="Left" Margin="376,22,0,0" VerticalAlignment="Top" Width="95" Click="ButtonPesquisar_Click"/>
-                    <DataGrid x:Name="dgPesquisar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Bottom" Height="400" Width="812" Background="LightGray" SelectionChanged="SelectionChanged_detalhes">
+                    <DataGrid x:Name="dgPesquisar" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Bottom" Height="405" Width="835" Background="LightGray" SelectionChanged="SelectionChanged_detalhes">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Estabelecimento" Binding="{Binding Path= nomeFantasia}" Width="300"/>
                             <DataGridTextColumn Header="Telefone" Binding="{Binding Path= telefoneEstabelecimento}" Width="200"/>
@@ -129,7 +129,7 @@
             </TabItem>
             <TabItem x:Name="bancoItem" Header="Banco"  Visibility="Collapsed">
                 <Grid Background="#FFE5E5E5" >
-                    <DataGrid x:Name="dgBanco" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" SelectionChanged="SelectionChanged_detalhes">
+                    <DataGrid x:Name="dgBanco" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Height="500" Width="850"   Background="LightGray" SelectionChanged="SelectionChanged_detalhes">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Estabelecimento" Binding="{Binding Path= nomeFantasia}" Width="300"/>
                             <DataGridTextColumn Header="Telefone" Binding="{Binding Path= telefoneEstabelecimento}" Width="200"/>
@@ -140,7 +140,7 @@
             </TabItem>
             <TabItem x:Name="estacionamentoItem" Header="Estacionamento" Visibility="Collapsed">
                 <Grid Background="#FFE5E5E5" >
-                    <DataGrid x:Name="dgEstacionamento" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" SelectionChanged="SelectionChanged_detalhes">
+                    <DataGrid x:Name="dgEstacionamento" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Height="500" Width="850"  Background="LightGray" SelectionChanged="SelectionChanged_detalhes">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Estabelecimento" Binding="{Binding Path= nomeFantasia}" Width="300"/>
                             <DataGridTextColumn Header="Telefone" Binding="{Binding Path= telefoneEstabelecimento}" Width="200"/>
@@ -151,7 +151,7 @@
             </TabItem>
             <TabItem x:Name="farmaciaItem" Header="Farmácia" Visibility="Collapsed">
                 <Grid Background="#FFE5E5E5" >
-                    <DataGrid x:Name="dgFarmacia" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" SelectionChanged="SelectionChanged_detalhes">
+                    <DataGrid x:Name="dgFarmacia" AutoGenerateColumns="False"  HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Height="500" Width="850"   Background="LightGray" SelectionChanged="SelectionChanged_detalhes">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Estabelecimento" Binding="{Binding Path= nomeFantasia}" Width="300"/>
                             <DataGridTextColumn Header="Telefone" Binding="{Binding Path= telefoneEstabelecimento}" Width="200"/>
@@ -162,7 +162,7 @@
             </TabItem>
             <TabItem x:Name="fastfoodItem" Header="Fast-Food" Visibility="Collapsed">
                 <Grid Background="#FFE5E5E5" >
-                    <DataGrid x:Name="dgFastfood"  AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" SelectionChanged="SelectionChanged_detalhes">
+                    <DataGrid x:Name="dgFastfood"  AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Height="500" Width="850"  Background="LightGray" SelectionChanged="SelectionChanged_detalhes">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Estabelecimento" Binding="{Binding Path= nomeFantasia}" Width="300"/>
                             <DataGridTextColumn Header="Telefone" Binding="{Binding Path= telefoneEstabelecimento}" Width="200"/>
@@ -173,7 +173,7 @@
             </TabItem>
             <TabItem x:Name="hotelItem" Header="Hotel" Visibility="Collapsed">
                 <Grid Background="#FFE5E5E5" >
-                    <DataGrid x:Name="dgHotel" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" SelectionChanged="SelectionChanged_detalhes">
+                    <DataGrid x:Name="dgHotel" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Height="500" Width="850"  Background="LightGray" SelectionChanged="SelectionChanged_detalhes">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Estabelecimento" Binding="{Binding Path= nomeFantasia}" Width="300"/>
                             <DataGridTextColumn Header="Telefone" Binding="{Binding Path= telefoneEstabelecimento}" Width="200"/>
@@ -184,7 +184,7 @@
             </TabItem>
             <TabItem x:Name="petshopItem" Header="Pet-Shop" Visibility="Collapsed">
                 <Grid Background="#FFE5E5E5" >
-                    <DataGrid x:Name="dgPetshop" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="446" Width="812" SelectionChanged="SelectionChanged_detalhes">
+                    <DataGrid x:Name="dgPetshop" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Height="500" Width="850" Background="LightGray" SelectionChanged="SelectionChanged_detalhes">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Estabelecimento" Binding="{Binding Path= nomeFantasia}" Width="300"/>
                             <DataGridTextColumn Header="Telefone" Binding="{Binding Path= telefoneEstabelecimento}" Width="200"/>
