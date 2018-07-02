@@ -46,6 +46,18 @@ namespace WPFView
             btn_salvarEst.Visibility = Visibility.Collapsed;
             btn_editarEst.Visibility = Visibility.Collapsed;
 
+            if(_est.ativo == true)
+            {
+                btn_desativar.Visibility = Visibility.Visible;
+                btn_ativar.Visibility = Visibility.Collapsed;
+            }
+            else if(_est.ativo == false)
+            {
+                alterarEnderecoEstab.Visibility = Visibility.Collapsed;
+                btn_desativar.Visibility = Visibility.Collapsed;
+                btn_ativar.Visibility = Visibility.Visible;
+            }
+
         }
 
         private void editar_Click(object sender, RoutedEventArgs e)
@@ -106,5 +118,76 @@ namespace WPFView
             altEnd.Show();
             this.Close();
         }
+
+        private void desativar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                _est.nomeFantasia = nomeFantasia.Text;
+                _est.cnpjEstabelecimento = cnpj.Text;
+                _est.categoria = categoria.Text;
+                _est.telefoneEstabelecimento = telefone.Text;
+                _est.websiteEstabelecimento = website.Text;
+                _est.emailEstabelecimento = email.Text;
+                _est.senhaE = senha.Password;
+                _est.ativo = false;
+
+                EstabelecimentoController estContr = new EstabelecimentoController();
+
+                int resp = estContr.Editar(_est);
+
+                if (resp == 1)
+                {
+                    MessageBox.Show("Conta desativada!");
+                }
+                else if (resp == 0)
+                {
+                    MessageBox.Show("Houston, temos um problema!");
+                }
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ligue para o suporte: " + ex);
+
+            }
+        }
+
+        private void ativar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                _est.nomeFantasia = nomeFantasia.Text;
+                _est.cnpjEstabelecimento = cnpj.Text;
+                _est.categoria = categoria.Text;
+                _est.telefoneEstabelecimento = telefone.Text;
+                _est.websiteEstabelecimento = website.Text;
+                _est.emailEstabelecimento = email.Text;
+                _est.senhaE = senha.Password;
+                _est.ativo = true;
+
+                EstabelecimentoController estContr = new EstabelecimentoController();
+
+                int resp = estContr.Editar(_est);
+
+                if (resp == 1)
+                {
+                    MessageBox.Show("Conta ativada!");
+                }
+                else if (resp == 0)
+                {
+                    MessageBox.Show("Houston, temos um problema!");
+                }
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ligue para o suporte: " + ex);
+
+            }
+        }
     }
+    
 }

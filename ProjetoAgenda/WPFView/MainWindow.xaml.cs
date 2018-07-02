@@ -33,12 +33,14 @@ namespace WPFView
         {
             CadastroUsuario cadastroUsuario = new CadastroUsuario();
             cadastroUsuario.Show();
+            
         }
 
         private void cadastraEstabelecimento_Click(object sender, RoutedEventArgs e)
         {
             CadastroEstabelecimento cadastroEstabelecimento = new CadastroEstabelecimento();
             cadastroEstabelecimento.Show();
+            
             
         }
 
@@ -63,6 +65,7 @@ namespace WPFView
                         AlterarUsuario altUsu = new AlterarUsuario();
                         Home home = new Home(1);
                         home.Show();
+                        this.Close();
                     }
                     else
                     {
@@ -84,6 +87,7 @@ namespace WPFView
                         AlterarEstabelecimento altEst = new AlterarEstabelecimento();
                         Home home = new Home(2);
                         home.Show();
+                        this.Close();
                     }
                     else
                     {

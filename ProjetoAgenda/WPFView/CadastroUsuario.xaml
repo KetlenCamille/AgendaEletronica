@@ -22,7 +22,7 @@
         <Label Content="Dados pessoais:" HorizontalAlignment="Left" Margin="10,-1,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label x:Name="label_Copy5" Content="Senha:" HorizontalAlignment="Left" Margin="50,224,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,2.154"/>
         <PasswordBox x:Name="senhaUsuario" HorizontalAlignment="Left" Margin="114,227,0,0" VerticalAlignment="Top" Width="191"/>
-        <Button x:Name="buttonCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="156,280,0,0" VerticalAlignment="Top" Width="98" Click="buttonCadastrar_Click"/>
+        <Button x:Name="buttonCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="121,282,0,0" VerticalAlignment="Top" Width="98" Click="buttonCadastrar_Click"/>
         <DatePicker x:Name="datanascUsuario" HorizontalAlignment="Left" Margin="114,84,0,0" VerticalAlignment="Top" Width="191"/>
         <Label Content="Telefone:" HorizontalAlignment="Left" Margin="44,118,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="telefone" HorizontalAlignment="Left" Height="25" Margin="114,119,0,0" TextWrapping="Wrap" Text="(xx) xxxx-xxxx" VerticalAlignment="Top" Width="191" GotMouseCapture="LimparTelefone"/>

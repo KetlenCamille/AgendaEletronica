@@ -55,6 +55,8 @@ namespace WPFView
                     }
 
                     this.Close();
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
                 }
             }
             catch (InvalidOperationException)

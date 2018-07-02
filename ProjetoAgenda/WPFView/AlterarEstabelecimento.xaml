@@ -31,6 +31,8 @@
         <Label Content="Senha:" HorizontalAlignment="Left" Margin="50,442,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btn_editarEst" Content="Alterar Dados" HorizontalAlignment="Left" Margin="84,480,0,0" VerticalAlignment="Top" Width="173" Click="editar_Click"/>
         <Button x:Name="btn_salvarEst" Content="Salvar" HorizontalAlignment="Left" Margin="84,480,0,0" VerticalAlignment="Top" Width="173" Click="salvar_Click"/>
+        <Button x:Name="btn_desativar" Content="Desativar Conta" HorizontalAlignment="Left" Margin="84,480,0,0" VerticalAlignment="Top" Width="173" Click="desativar_Click"/>
+        <Button x:Name="btn_ativar" Content="Ativar Conta" HorizontalAlignment="Left" Margin="84,480,0,0" VerticalAlignment="Top" Width="173" Click="ativar_Click"/>
         <PasswordBox x:Name="senha" HorizontalAlignment="Left" Margin="114,439,0,0" VerticalAlignment="Top" Width="196" IsEnabled="False"/>
         <Label Content="E-mail:" HorizontalAlignment="Left" Margin="49,406,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="email" HorizontalAlignment="Left" Height="25" Margin="114,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" IsEnabled="False"/>

@@ -94,6 +94,8 @@ namespace WPFView
                 this.Close();
 
                 AlterarEstabelecimento altEst = new AlterarEstabelecimento();
+                altEst.btn_desativar.Visibility = Visibility.Collapsed;
+                altEst.btn_ativar.Visibility = Visibility.Collapsed;
                 altEst.btn_editarEst.Visibility = Visibility.Visible;
                 altEst.Show();
 

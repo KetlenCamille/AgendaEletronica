@@ -29,7 +29,7 @@
         <Label Content="Website:" HorizontalAlignment="Left" Margin="46,287,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="website" HorizontalAlignment="Left" Height="25" Margin="114,284,0,0" TextWrapping="Wrap" Text="Digite o website" VerticalAlignment="Top" Width="196" GotMouseCapture="LimparWeb"/>
         <Label Content="Senha:" HorizontalAlignment="Left" Margin="50,442,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="cadastrarEstab_btn" Content="Cadastrar" HorizontalAlignment="Left" Margin="154,486,0,0" VerticalAlignment="Top" Width="113" Height="29" Click="cadastrarEstab_Click"/>
+        <Button x:Name="cadastrarEstab_btn" Content="Cadastrar" HorizontalAlignment="Left" Margin="114,478,0,0" VerticalAlignment="Top" Width="113" Height="29" Click="cadastrarEstab_Click"/>
         <PasswordBox x:Name="senha" HorizontalAlignment="Left" Margin="114,439,0,0" VerticalAlignment="Top" Width="196"/>
         <Label Content="E-mail:" HorizontalAlignment="Left" Margin="49,406,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="email" Text="Digite seu e-mail" HorizontalAlignment="Left" Height="25" Margin="114,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" GotMouseCapture="LimparEmail"/>
