@@ -35,6 +35,7 @@ namespace Controllers
             {
                 contexto.Entry(estabelecimento).State = System.Data.Entity.EntityState.Modified;
                 contexto.SaveChanges();
+                return 1;
             }
             return 0;
         }
@@ -52,17 +53,17 @@ namespace Controllers
 
         public IList<Estabelecimento> ListarTodos()
         {
-            return contexto.Estabelecimentos.ToList();
+            return contexto.Estabelecimentos.Where(a => a.ativo == true).ToList();
         }
 
         public IList<Estabelecimento> ListarPorNome(string nomeEstabelecimento)
         {
-            return contexto.Estabelecimentos.Where(a => a.nomeFantasia.ToLower() == nomeEstabelecimento.ToLower()).ToList();
+            return contexto.Estabelecimentos.Where(a => a.nomeFantasia.ToLower() == nomeEstabelecimento.ToLower() && a.ativo == true).ToList();
         }
 
         public IList<Estabelecimento> ListarPorCategoria(string categoriaE)
         {
-            return contexto.Estabelecimentos.Where(a => a.categoria.ToLower() == categoriaE.ToLower()).ToList();
+            return contexto.Estabelecimentos.Where(a => a.categoria.ToLower() == categoriaE.ToLower() && a.ativo == true).ToList();
         }
 
         public bool Autenticar(string emailView, string senhaView)
@@ -84,7 +85,7 @@ namespace Controllers
 
         public IList<Estabelecimento> ListarPorPesquisa(string pesquisa)
         {
-            return contexto.Estabelecimentos.Where(a => a.nomeFantasia.ToLower().Contains(pesquisa.ToLower())).ToList();
+            return contexto.Estabelecimentos.Where(a => a.nomeFantasia.ToLower().Contains(pesquisa.ToLower()) && a.ativo == true).ToList();
         }
     }
 }

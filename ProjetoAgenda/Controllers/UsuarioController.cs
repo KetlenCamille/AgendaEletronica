@@ -33,7 +33,9 @@ namespace Controllers
         {
             if (usuario != null)
             {
+                
                 contexto.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
+                
                 contexto.SaveChanges();
 
                 return 1;

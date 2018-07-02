@@ -21,21 +21,24 @@ namespace WPFView
     /// </summary>
     public partial class AlterarUsuario : Window
     {
+
+        private Usuario _usu;
+
         public AlterarUsuario()
         {
             InitializeComponent();
             UsuarioController usuC = new UsuarioController();
 
-            var usu = Application.Current.Properties["_user"] as Usuario;
+            _usu = Application.Current.Properties["_user"] as Usuario;
 
-            var usuario = usuC.BuscarPorId(usu.IdUsuario);
+            //var usuario = usuC.BuscarPorId(usu.IdUsuario);
 
-            nomeUsuario.Text = usuario.NomeUsuario;
-            cpfUsuario.Text = usuario.cpfUsuario;
-            datanascUsuario.SelectedDate = usuario.dataNascimentoUsuario;
-            telefone.Text = usuario.telefoneUsuario;
-            emailUsuario.Text = usuario.emailUsuario;
-            senhaUsuario.Password = usuario.senhaUsuario;
+            nomeUsuario.Text = _usu.NomeUsuario;
+            cpfUsuario.Text = _usu.cpfUsuario;
+            datanascUsuario.SelectedDate = _usu.dataNascimentoUsuario;
+            telefone.Text = _usu.telefoneUsuario;
+            emailUsuario.Text = _usu.emailUsuario;
+            senhaUsuario.Password = _usu.senhaUsuario;
 
             btn_salvar.Visibility = Visibility.Collapsed;
         }
@@ -46,7 +49,7 @@ namespace WPFView
 
             var usu = Application.Current.Properties["_user"] as Usuario;
 
-            var usuario = usuC.BuscarPorId(usu.IdUsuario);
+            var usuario = usuC.BuscarPorId(_usu.IdUsuario);
 
             nomeUsuario.IsEnabled = true;
             cpfUsuario.IsEnabled = true;
@@ -63,17 +66,17 @@ namespace WPFView
         {
             try
             {
-                Usuario usuarioView = new Usuario();
+                //Usuario usuarioView = new Usuario();
 
-                usuarioView.NomeUsuario = nomeUsuario.Text;
-                usuarioView.cpfUsuario = cpfUsuario.Text;
-                usuarioView.dataNascimentoUsuario = datanascUsuario.SelectedDate.Value;
-                usuarioView.telefoneUsuario = telefone.Text;
-                usuarioView.emailUsuario = emailUsuario.Text;
-                usuarioView.senhaUsuario = senhaUsuario.Password;
+                _usu.NomeUsuario = nomeUsuario.Text;
+                _usu.cpfUsuario = cpfUsuario.Text;
+                _usu.dataNascimentoUsuario = datanascUsuario.SelectedDate.Value;
+                _usu.telefoneUsuario = telefone.Text;
+                _usu.emailUsuario = emailUsuario.Text;
+                _usu.senhaUsuario = senhaUsuario.Password;
 
                 UsuarioController usuContr = new UsuarioController();
-                int resp = usuContr.Editar(usuarioView);
+                int resp = usuContr.Editar(_usu);
 
                 if (resp == 1)
                 {

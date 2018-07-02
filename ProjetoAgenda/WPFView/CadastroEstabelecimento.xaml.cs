@@ -44,6 +44,7 @@ namespace WPFView
                 estabelecimentoView.websiteEstabelecimento = website.Text;
                 estabelecimentoView.emailEstabelecimento = email.Text;
                 estabelecimentoView.senhaE = senha.Password;
+                estabelecimentoView.ativo = true;
 
                 EstabelecimentoController estacionamentoController = new EstabelecimentoController();
                 if(validar(estabelecimentoView))
@@ -60,6 +61,9 @@ namespace WPFView
                     }
 
                     this.Close();
+
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
                 }  
             }
             catch (Exception ex)

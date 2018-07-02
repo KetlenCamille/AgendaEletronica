@@ -32,6 +32,8 @@ namespace Models
         [Required, MinLength(7)]
         public string senhaE { get; set; }
 
+        public bool ativo { get; set; }
+
         public ICollection<Produto> ProdutosPorEstabelecimento { get; set; }
     }
 }
