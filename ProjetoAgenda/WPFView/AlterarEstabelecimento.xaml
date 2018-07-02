@@ -9,9 +9,9 @@
     <Grid>
         <Label Content="Dados do Estabelecimento:" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" BorderThickness="0" FontWeight="Bold" />
         <Label Content="CNPJ:" HorizontalAlignment="Left" Margin="52,168,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="cnpj" HorizontalAlignment="Left" Height="25" Margin="114,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" IsEnabled="False"/>
+        <TextBox x:Name="cnpj" HorizontalAlignment="Left" Height="26" Margin="114,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" IsEnabled="False"/>
         <Label Content="Nome Fantasia:" HorizontalAlignment="Left" Margin="16,132,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.114,0.526"/>
-        <TextBox x:Name="nomeFantasia" Height="25" Margin="114,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="191" IsEnabled="False"/>
+        <TextBox x:Name="nomeFantasia" Height="26" Margin="114,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="191" IsEnabled="False"/>
         <Label Content="Categoria:" HorizontalAlignment="Left" Margin="41,208,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="categoria"  HorizontalAlignment="Left" Margin="114,204,0,0" VerticalAlignment="Top" Width="196" IsEnabled="False">
             <ComboBoxItem Content="Banco"/>
@@ -25,9 +25,9 @@
             <ComboBoxItem Content="Vestuário"/>
         </ComboBox>
         <Label Content="Telefone:" HorizontalAlignment="Left" Margin="43,246,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="telefone" HorizontalAlignment="Left" Height="25" Margin="114,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" IsEnabled="False"/>
+        <TextBox x:Name="telefone" HorizontalAlignment="Left" Height="26" Margin="114,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" IsEnabled="False"/>
         <Label Content="Website:" HorizontalAlignment="Left" Margin="46,287,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="website" HorizontalAlignment="Left" Height="25" Margin="114,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" IsEnabled="False"/>
+        <TextBox x:Name="website" HorizontalAlignment="Left" Height="26" Margin="114,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" IsEnabled="False"/>
         <Label Content="Senha:" HorizontalAlignment="Left" Margin="50,442,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btn_editarEst" Content="Alterar Dados" HorizontalAlignment="Left" Margin="84,480,0,0" VerticalAlignment="Top" Width="173" Click="editar_Click"/>
         <Button x:Name="btn_salvarEst" Content="Salvar" HorizontalAlignment="Left" Margin="84,480,0,0" VerticalAlignment="Top" Width="173" Click="salvar_Click"/>
@@ -35,7 +35,7 @@
         <Button x:Name="btn_ativar" Content="Ativar Conta" HorizontalAlignment="Left" Margin="84,480,0,0" VerticalAlignment="Top" Width="173" Click="ativar_Click"/>
         <PasswordBox x:Name="senha" HorizontalAlignment="Left" Margin="114,439,0,0" VerticalAlignment="Top" Width="196" IsEnabled="False"/>
         <Label Content="E-mail:" HorizontalAlignment="Left" Margin="49,406,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="email" HorizontalAlignment="Left" Height="25" Margin="114,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" IsEnabled="False"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="26" Margin="114,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" IsEnabled="False"/>
         <Label Content="Dados do Login:" HorizontalAlignment="Left" Margin="10,376,0,0" VerticalAlignment="Top" BorderThickness="0" FontWeight="Bold" />
         <Button x:Name="alterarEnderecoEstab" Content="Alterar Endereço" HorizontalAlignment="Left" Margin="114,44,0,0" VerticalAlignment="Top" Width="196" Click="alterarEnderecoEstab_Click"/>
 
