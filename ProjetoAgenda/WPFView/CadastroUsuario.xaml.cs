@@ -130,12 +130,21 @@ namespace WPFView
             {
                 erro = " Senha deve conter no mínimo 8 caracteres.";
             }
-            else if(usuario.cpfUsuario.Length != 11 || !validaCpf(usuario.cpfUsuario))
+            else if(usuario.cpfUsuario.Length != 11 && !validaCpf(usuario.cpfUsuario))
             {
                 erro = " CPF inválido.";
             }
 
-            if(erro == null)
+            UsuarioController usuController = new UsuarioController();
+            foreach (Usuario usu in usuController.ListarTodos())
+            {
+                if(usu.emailUsuario ==  usuario.emailUsuario)
+                {
+                    erro = " E-mail já existente!";
+                }
+            }
+
+            if (erro == null)
             {
                 return true;
             }
