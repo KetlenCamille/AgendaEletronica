@@ -35,6 +35,7 @@ namespace Controllers
             {
                 contexto.Entry(estabelecimento).State = System.Data.Entity.EntityState.Modified;
                 contexto.SaveChanges();
+                return 1;
             }
             return 0;
         }
