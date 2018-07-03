@@ -109,7 +109,19 @@
         </Grid>
         <TabControl x:Name="menuTab" HorizontalAlignment="Left" Height="510" Margin="200,65,0,0" VerticalAlignment="Top" Width="862" BorderBrush="{x:Null}" SelectionChanged="ListCategoria" Background="LightGray">
             <TabItem x:Name="destaquesItem" Header="Destaques" Visibility="Collapsed">
-                <Grid Margin="10,0,-27,-21">
+                <Grid Margin="-2,0,-15,-21">
+                    <Image HorizontalAlignment="Left" Source="banco-itau.jpg"  Height="147" Margin="22,59,0,0" VerticalAlignment="Top" Width="195"/>
+                    <Image HorizontalAlignment="Left" Height="100" Margin="78,234,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Image Margin="22,268,655,89" Source="mercado-big.jpg" Stretch="Fill"/>
+                    <Image HorizontalAlignment="Left" Height="100" Margin="314,81,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Image Margin="295,59,382,298" Source="download.jpg" Stretch="Fill"/>
+                    <Image HorizontalAlignment="Left" Height="100" Margin="341,280,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Image Margin="295,268,382,89" Source="Habibs.png" Stretch="Fill"/>
+                    <Image HorizontalAlignment="Left" Height="100" Margin="594,81,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Image Margin="565,59,112,298" Source="patio-batel-2-e1489091307347.jpg" Stretch="Fill"/>
+                    <Image HorizontalAlignment="Left" Height="100" Margin="628,318,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Image Margin="565,268,112,89" Source="LIP_9045.JPG" Stretch="Fill"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="22,14,0,0" TextWrapping="Wrap" Text="Estabelecimentos destaque" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="pesquisarItem"  Header="Pesquisar" Visibility="Collapsed">
