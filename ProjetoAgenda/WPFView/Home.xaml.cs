@@ -195,14 +195,14 @@ namespace WPFView
             {
                 DataGrid dg = ((DataGrid)sender);
                 Estabelecimento endEstabelecimento = (Estabelecimento)dg.Items[dg.SelectedIndex];
-                
-                if (endEstabelecimento.idEndereco > 0)
-                {
-                    DetalhesEstabelecimento detalhes = new DetalhesEstabelecimento(endEstabelecimento);
-                    detalhes.Show();
-                }
-            MessageBox.Show(dgFastfood.ToString());
+                DetalhesEstabelecimento detalhes = new DetalhesEstabelecimento(endEstabelecimento);
+
+                detalhes.Show();
             }
+            catch(ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Dados sendo processados....");
+            
             catch (Exception ex)
             {
                 MessageBox.Show("Ligue para o suporte: " + ex);
