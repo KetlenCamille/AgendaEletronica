@@ -110,18 +110,43 @@
         <TabControl x:Name="menuTab" HorizontalAlignment="Left" Height="510" Margin="200,65,0,0" VerticalAlignment="Top" Width="862" BorderBrush="{x:Null}" SelectionChanged="ListCategoria" Background="LightGray">
             <TabItem x:Name="destaquesItem" Header="Destaques" Visibility="Collapsed">
                 <Grid Margin="-2,0,-15,-21">
-                    <Image HorizontalAlignment="Left" Source="banco-itau.jpg"  Height="147" Margin="22,59,0,0" VerticalAlignment="Top" Width="195"/>
+                    <Image HorizontalAlignment="Left" Source="banco-itau.jpg"  Height="147"  Width="195" Margin="22,59,0,0" VerticalAlignment="Top"/>
                     <Image HorizontalAlignment="Left" Height="100" Margin="78,234,0,0" VerticalAlignment="Top" Width="100"/>
-                    <Image Margin="22,268,655,89" Source="mercado-big.jpg" Stretch="Fill"/>
-                    <Image HorizontalAlignment="Left" Height="100" Margin="314,81,0,0" VerticalAlignment="Top" Width="100"/>
-                    <Image Margin="295,59,382,298" Source="download.jpg" Stretch="Fill"/>
+                    <Label Content="Banco Itaú"  Margin="94,205,0,0" FontWeight="Bold"/>
+                    <Label Content="Rua Visc. de Nacar, 1322"  Margin="63,221,0,0"  />
+                    <Label Content="Centro - Curitiba - PR"  Margin="74,238,0,0"  />
+
+                    <Image HorizontalAlignment="Left" Source="mercado-big.jpg" Height="147" Width="195"  Margin="22,282,655,89" VerticalAlignment="Top" Stretch="Fill"/>
+                    <Image HorizontalAlignment="Left" Height="100" Margin="314,81,0,0" VerticalAlignment="Top" Width="100" />
+                    <Label Content="Hipermercado BIG"  Margin="64,430,0,0" FontWeight="Bold"/>
+                    <Label Content="Rua Francisco Derosso, 2973"  Margin="40,447,0,0"  />
+                    <Label Content="Xaxim - Curitiba - PR"  Margin="64,465,0,0"  />
+
+                    <Image Margin="295,44,382,298" Source="download.jpg" Stretch="Fill" Height="147" Width="195"/>
                     <Image HorizontalAlignment="Left" Height="100" Margin="341,280,0,0" VerticalAlignment="Top" Width="100"/>
-                    <Image Margin="295,268,382,89" Source="Habibs.png" Stretch="Fill"/>
+                    <Label Content="Hard Rock Café"  Margin="350,205,0,0" FontWeight="Bold"/>
+                    <Label Content="Rua Buenos Aires, 50"  Margin="340,221,0,0" />
+                    <Label Content="Batel - Curitiba - PR"  Margin="343,238,0,0" />
+
+                    <Image Margin="295,281,382,89" Source="Habibs.png" Height="147" Width="195" Stretch="Fill"/>
                     <Image HorizontalAlignment="Left" Height="100" Margin="594,81,0,0" VerticalAlignment="Top" Width="100"/>
-                    <Image Margin="565,59,112,298" Source="patio-batel-2-e1489091307347.jpg" Stretch="Fill"/>
+                    <Label Content="Habib`s"  Margin="370,430,0,0" FontWeight="Bold"/>
+                    <Label Content="Av. Victor Ferreira do Amaral, 639"  Margin="300,447,0,0" />
+                    <Label Content="Tarumã - Curitiba - PR"  Margin="332,465,0,0" />
+
+                    <Image Margin="565,40,112,298" Source="patio-batel-2-e1489091307347.jpg"  Height="147" Width="195" Stretch="Fill"/>
                     <Image HorizontalAlignment="Left" Height="100" Margin="628,318,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Label Content="Shopping Pátio Batel"  Margin="598,205,0,0" FontWeight="Bold"/>
+                    <Label Content="Av. do Batel, 1868"  Margin="610,221,0,0" />
+                    <Label Content="Batel - Curitiba - PR"  Margin="607,238,0,0" />
+
                     <Image Margin="565,268,112,89" Source="LIP_9045.JPG" Stretch="Fill"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="22,14,0,0" TextWrapping="Wrap" Text="Estabelecimentos destaque" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="22,14,0,0" TextWrapping="Wrap" Text="Os mais procurados da semana..." VerticalAlignment="Top" FontSize="15" FontWeight="Bold"/>
+                    <Label Content="Abaré Pizzarias"  Margin="622,430,0,0" FontWeight="Bold"/>
+                    <Label Content="Rua Padre Agostinho, 1381"  Margin="593,447,0,0" />
+                    <Label Content="Bigorrilho - Curitiba - PR"  Margin="598,465,0,0" />
+
+
                 </Grid>
             </TabItem>
             <TabItem x:Name="pesquisarItem"  Header="Pesquisar" Visibility="Collapsed">

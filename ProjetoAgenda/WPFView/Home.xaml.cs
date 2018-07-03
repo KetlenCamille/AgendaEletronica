@@ -78,12 +78,28 @@ namespace WPFView
             else if (farmaciaItem.IsSelected)
             {
                 categoria = "Farmácia";
-                dgFarmacia.ItemsSource = estabelecimentoController.ListarPorCategoria(categoria);
+                if (estabelecimentoController.ListarPorCategoria(categoria) == null)
+                {
+                    MessageBox.Show("Não possui estabelecimentos nesta categoria!");
+                }
+                else
+                {
+                    dgFarmacia.ItemsSource = estabelecimentoController.ListarPorCategoria(categoria);
+                }
+                
             }
             else if (fastfoodItem.IsSelected)
             {
                 categoria = "Fast-Food";
-                dgFastfood.ItemsSource = estabelecimentoController.ListarPorCategoria(categoria);
+                if(estabelecimentoController.ListarPorCategoria(categoria) == null)
+                {
+                    MessageBox.Show("Não possui estabelecimentos nesta categoria!");
+                }
+                else
+                {
+                    dgFastfood.ItemsSource = estabelecimentoController.ListarPorCategoria(categoria);
+                }
+                
             }
             else if (hotelItem.IsSelected)
             {

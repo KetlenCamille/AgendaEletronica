@@ -33,6 +33,7 @@ namespace WPFView
         {
             CadastroUsuario cadastroUsuario = new CadastroUsuario();
             cadastroUsuario.Show();
+            //this.Close();
             
         }
 

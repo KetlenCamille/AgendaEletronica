@@ -53,7 +53,7 @@ namespace Controllers
 
         public IList<Estabelecimento> ListarTodos()
         {
-            return contexto.Estabelecimentos.Where(a => a.ativo == true).ToList();
+            return contexto.Estabelecimentos.ToList();
         }
 
         public IList<Estabelecimento> ListarPorNome(string nomeEstabelecimento)
